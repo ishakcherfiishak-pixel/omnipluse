@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head><title>OmniPulse — النبض الرقمي الموحد</title><meta name="description" content="OmniPulse منصة عربية موحدة للشورتس والفيديوهات والقصص والرسائل والمحتوى اليومي."><meta name="theme-color" content="#141219"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml"><meta name="color-scheme" content="dark"><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;500;600&amp;family=Amiri:wght@400;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;font-family:'Cairo',sans-serif;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+.tab-pane {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tab-pane.active-pane {
+  display: block;
+  opacity: 1;
+  animation: fadeIn 0.35s ease-out forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-variant": "#36343b", "on-secondary-fixed": "#40000f", "secondary-container": "#ff506e", "inverse-on-surface": "#312f37", "surface-dim": "#141219", "on-primary": "#00373a", "surface-bright": "#3a3840", "surface-container-high": "#2b2930", "on-surface": "#e6e0ea", "tertiary": "#fff6e9", "on-primary-fixed-variant": "#004f53", "secondary-fixed": "#ffdadb", "primary-container": "#00f2fe", "tertiary-container": "#ffd761", "surface-container": "#201f26", "on-tertiary-fixed": "#241a00", "error": "#ffb4ab", "on-primary-container": "#006a70", "on-secondary": "#67001d", "on-secondary-container": "#5b0018", "primary-fixed": "#6ff6ff", "outline": "#849495", "surface-container-highest": "#36343b", "surface-container-low": "#1c1b21", "on-tertiary-fixed-variant": "#584400", "on-primary-fixed": "#002022", "outline-variant": "#3a494b", "background": "#141219", "on-background": "#e6e0ea", "surface": "#141219", "on-secondary-fixed-variant": "#91002d", "tertiary-fixed": "#ffe08b", "on-surface-variant": "#b9cacb", "on-error": "#690005", "primary-fixed-dim": "#00dce6", "on-error-container": "#ffdad6", "surface-tint": "#00dce6", "on-tertiary": "#3d2f00", "inverse-surface": "#e6e0ea", "error-container": "#93000a", "on-tertiary-container": "#755d00", "tertiary-fixed-dim": "#f1c100", "inverse-primary": "#00696f", "surface-container-lowest": "#0f0d14", "secondary-fixed-dim": "#ffb2b8", "primary": "#e0fdff", "secondary": "#ffb2b8" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "margin": "1rem", "space-xl": "2.5rem", "space-md": "1rem", "gutter": "1rem", "space-sm": "0.5rem", "margin-desktop": "2rem", "margin-tablet": "1.5rem", "gutter-desktop": "1.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem" }, "fontFamily": { "title-md": ["Space Grotesk"], "body-sm": ["Inter"], "label-md": ["Space Grotesk"], "label-lg": ["Space Grotesk"], "display-xl-mobile": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "display-xl": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "body-lg": ["Inter"], "label-sm": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "body-md": ["Inter"], "quran": ["Amiri", "serif"] }, "fontSize": { "title-md": ["18px", { "lineHeight": "24px", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display-xl-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "display-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen overflow-x-hidden"><aside class="fixed right-0 top-0 h-full w-72 bg-surface-container-low/90 backdrop-blur-2xl z-50 flex flex-col justify-between py-6 px-4 shadow-[0_4px_30px_rgba(0,0,0,0.5)]"><div class="flex flex-col gap-6"><div class="flex items-center gap-3 px-3 cursor-pointer" onclick="navigateToTab('main-feed')"><div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary-container via-surface-tint to-secondary-container p-[2px] shadow-[0_0_20px_rgba(0,242,254,0.35)]"><div class="w-full h-full rounded-full bg-surface-container-lowest flex items-center justify-center"><span class="material-symbols-outlined text-primary-fixed text-xl">all_inclusive</span></div></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold tracking-tight bg-gradient-to-l from-primary via-primary-container to-secondary-fixed bg-clip-text text-transparent">OmniPulse</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">النبض الرقمي الموحد</span></div></div><nav class="flex flex-col gap-1.5" id="sidebarNav"><a aria-current="page" class="nav-btn flex items-center gap-3 px-3.5 py-3 rounded-lg transition-all group bg-surface-container-highest text-primary font-bold shadow-[inset_0_0_12px_rgba(0,242,254,0.15)] border-r-2 border-primary-container" data-tab="main-feed" href="index.html"><span class="material-symbols-outlined text-xl group-hover:text-primary-container transition-colors">dynamic_feed</span><span class="font-body-md text-body-md font-medium">الخلاصة الموحدة</span></a><a class="nav-btn flex items-center gap-3 px-3.5 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-tab="shorts-and-cinema" href="shorts.html"><span class="material-symbols-outlined text-xl group-hover:text-secondary-container transition-colors">movie_filter</span><span class="font-body-md text-body-md font-medium">شورتس وسينما</span></a><a class="nav-btn flex items-center gap-3 px-3.5 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-tab="stories-and-messages" href="stories.html"><span class="material-symbols-outlined text-xl group-hover:text-tertiary-fixed-dim transition-colors">auto_stories</span><span class="font-body-md text-body-md font-medium flex-1">القصص والرسائل</span><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant border border-outline-variant/30">E2EE</span></a><a class="nav-btn flex items-center gap-3 px-3.5 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-tab="mushaf-reader" href="quran.html"><span class="material-symbols-outlined text-xl group-hover:text-tertiary-container transition-colors">menu_book</span><span class="font-body-md text-body-md font-medium flex-1">القرآن الكريم والورد</span><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary-container border border-tertiary-container/30">15 د</span></a><a class="nav-btn flex items-center gap-3 px-3.5 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-tab="settings-and-wellbeing" href="settings.html"><span class="material-symbols-outlined text-xl group-hover:text-primary transition-colors">security</span><span class="font-body-md text-body-md font-medium">الإعدادات والرفاهية</span></a></nav></div><div class="mt-auto pt-4 flex flex-col gap-3"><div class="relative overflow-hidden rounded-xl bg-gradient-to-b from-surface-container-high/90 to-surface-container-low/95 p-4 shadow-[0_8px_24px_rgba(0,0,0,0.6)] backdrop-blur-xl border border-outline-variant/20"><div class="absolute -left-10 -top-10 w-28 h-28 bg-tertiary-container/10 rounded-full blur-2xl pointer-events-none"></div><div class="flex items-center justify-between mb-3"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary-container text-lg">menu_book</span><span class="font-label-lg text-label-lg font-bold text-tertiary">الورد اليومي</span></div><span class="font-label-sm text-label-sm text-tertiary-container bg-surface-container-highest/80 px-2.5 py-0.5 rounded-full font-bold">15 دقيقة</span></div><div class="w-full bg-surface-container-highest/60 rounded-full h-1.5 mb-2.5 overflow-hidden"><div class="bg-gradient-to-r from-tertiary-container to-tertiary h-1.5 rounded-full w-2/5"></div></div><div class="flex items-center justify-between text-on-surface-variant mb-3"><span class="font-label-sm text-label-sm">التقدم: 6 / 15 د</span><span class="font-label-sm text-label-sm text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">alarm</span>قفل بعد 12:00 ص</span></div><div class="p-2 rounded-lg bg-surface-container-lowest/80 mb-3"><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed text-center">تنبيه: يتم قفل التغذية وسينما الشورتس تلقائياً لمدة 60 دقيقة في حال عدم إتمام الورد قبل منتصف الليل.</p></div><button class="w-full flex items-center justify-center gap-2 py-2 rounded-lg bg-tertiary-container text-on-tertiary-container font-label-md text-label-md font-bold transition-all hover:bg-tertiary-fixed shadow-[0_0_15px_rgba(255,215,97,0.25)] cursor-pointer" onclick="navigateToTab('mushaf-reader')"><span class="material-symbols-outlined text-sm">auto_stories</span><span>فتح المصحف الكريم</span></button></div><div class="flex items-center justify-between px-2 pt-1 text-on-surface-variant/70"><span class="font-label-sm text-label-sm">OmniGuard AI Active</span><div class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_#00f2fe]"></div></div></div></aside><div class="pr-72"><header class="fixed top-0 left-0 right-72 h-20 bg-surface/80 backdrop-blur-2xl z-40 px-8 flex items-center justify-between shadow-[0_1px_12px_rgba(0,0,0,0.3)]"><div class="flex items-center gap-4"><div class="relative w-80"><span class="material-symbols-outlined absolute right-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl pointer-events-none">search</span><input class="w-full pr-11 pl-4 py-2 bg-surface-container-high/60 text-on-surface placeholder:text-on-surface-variant/60 font-body-sm text-body-sm rounded-full outline-none focus:ring-1 focus:ring-primary-container/60 transition-all shadow-[inset_0_1px_3px_rgba(0,0,0,0.4)]" placeholder="بحث ذكي عبر المنشورات، الريلز، والتريند..." type="text"/></div></div><div class="flex items-center gap-4"><button class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high/50 hover:bg-surface-container-highest transition-all shadow-inner cursor-pointer" onclick="navigateToTab('mushaf-reader')"><span class="material-symbols-outlined text-tertiary-container text-base animate-pulse">auto_stories</span><div class="flex flex-col text-right"><span class="font-label-sm text-label-sm text-tertiary leading-none font-bold">الورد القرآني</span><span class="font-body-sm text-[11px] text-on-surface-variant leading-none">متبقي 9 دقائق</span></div></button><button class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high/50 hover:bg-surface-container-highest transition-all shadow-inner cursor-pointer" onclick="navigateToTab('shorts-and-cinema')"><span class="material-symbols-outlined text-secondary text-base">timer</span><div class="flex flex-col text-right"><span class="font-label-sm text-label-sm text-secondary-fixed leading-none font-bold">حد الشورتس</span><span class="font-body-sm text-[11px] text-on-surface-variant leading-none">18 دقيقة اليوم</span></div></button><div class="h-6 w-[1px] bg-outline-variant/40 mx-1"></div><button aria-label="التنبيهات" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-all relative"><span class="material-symbols-outlined text-lg">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary-container ring-2 ring-surface"></span></button><button aria-label="الرسائل الفورية E2EE" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-all relative cursor-pointer" onclick="navigateToTab('stories-and-messages')"><span class="material-symbols-outlined text-lg">chat_bubble</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><button aria-label="الإعدادات الشخصية" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_12px_rgba(0,242,254,0.3)] cursor-pointer" onclick="navigateToTab('settings-and-wellbeing')"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></button></div></header><main class="relative pt-20 w-full min-h-screen px-8 pb-12">
+<!-- ================= TAB 1: الخلاصة الموحدة (Main Feed) ================= -->
+<div class="tab-pane active-pane" id="pane-main-feed"><div class="flex flex-col w-full">
+<!-- Dynamic Top Ambient Aura -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-24 right-1/4 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -top-12 left-10 w-80 h-80 bg-secondary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Section 1: Dynamic Stories & Ephemeral Status Tray -->
+<section class="relative w-full mb-8">
+<div class="flex items-center justify-between mb-3 px-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-lg">motion_photos_on</span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">القصص والنبضات الحية</h2>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-container/20 text-secondary font-bold">مباشر الآن</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary transition-all" id="storyScrollRight">
+<span class="material-symbols-outlined text-base">chevron_right</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary transition-all" id="storyScrollLeft">
+<span class="material-symbols-outlined text-base">chevron_left</span>
+</button>
+</div>
+</div>
+<!-- Story Avatars Scroll Track -->
+<div class="flex items-center gap-4 overflow-x-auto pb-3 pt-1 scroll-smooth" id="storiesTrack">
+<!-- Add Story Card -->
+<div class="flex-shrink-0 flex flex-col items-center gap-2 cursor-pointer group" onclick="navigateToTab('stories-and-messages')">
+<div class="relative w-20 h-20 rounded-full bg-surface-container-high p-1 shadow-md transition-transform duration-300 group-hover:scale-105">
+<div class="w-full h-full rounded-full bg-surface-container-highest flex flex-col items-center justify-center relative overflow-hidden">
+<span class="material-symbols-outlined text-primary-container text-2xl group-hover:rotate-90 transition-transform duration-300">add</span>
+<div class="absolute inset-0 bg-primary-container/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="absolute bottom-0 left-0 w-6 h-6 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-sm font-bold">add</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">قصتك</span>
+</div>
+<!-- Story 1: Anime Studio (Verified) -->
+<div class="flex-shrink-0 flex flex-col items-center gap-2 cursor-pointer group" onclick="navigateToTab('shorts-and-cinema')">
+<div class="relative w-20 h-20 rounded-full p-[2.5px] bg-gradient-to-tr from-primary-container via-surface-tint to-secondary-container shadow-[0_0_15px_rgba(0,242,254,0.3)] transition-transform duration-300 group-hover:scale-105">
+<div class="w-full h-full rounded-full overflow-hidden bg-surface-container-lowest p-[2px]">
+<img class="w-full h-full rounded-full object-cover" data-alt="Anime illustration portrait of a sharp detective anime character profile in dark noir cinematic lighting with cyan neon highlights and mystery aura" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvVZcSBji1pyW8EpsbIuxedd61PYSU7OQVdifFe4PDdkuHDJGKpLG_k4Q0C04ESsTpKeF_0DDugbFd2oyBsdquCFLClYfv0WYatMRA6AB7doI8n2qqEIQDWS_igms7E5_xDWeKny9JjhGBamL25zc5YKldoTbWZaK0GjTu7qafei2CUSuFhkCYrx9u1Ei0Af8OhSckcKMZwsqLI_YL0-Z8qHNlq9eiS58ZoZuhnS6CtabWqbltxxVkYQ"/>
+</div>
+<span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-xs">verified</span>
+</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface truncate max-w-[80px]">أرشيف كونان</span>
+</div>
+<!-- Story 2: Live Islamic Seminar -->
+<div class="flex-shrink-0 flex flex-col items-center gap-2 cursor-pointer group" onclick="navigateToTab('mushaf-reader')">
+<div class="relative w-20 h-20 rounded-full p-[2.5px] bg-gradient-to-tr from-tertiary-container via-tertiary-fixed to-primary-container shadow-[0_0_15px_rgba(255,215,97,0.35)] transition-transform duration-300 group-hover:scale-105">
+<div class="w-full h-full rounded-full overflow-hidden bg-surface-container-lowest p-[2px]">
+<img class="w-full h-full rounded-full object-cover" data-alt="Islamic geometric architecture and golden manuscript in elegant dark ambient setting with warm rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtq5dJ4p1Ueeag40X2j2WL9oUba3PTU8PSYX4UflgSorXtvvHWkXLsIc5DPR-q6vaVBY8oHyg-fPs2X330o3tAcotGLxZaNvYUUBTje-pNIJHgbktc1hRPWrD9vdiWA6TMp9tUBMer8PpBiWzXhJ8qkT18E5qH5w5eQQGClgdhRe8WdYQz68XN00QQ5KZEQIAf-MZjnCHDuQKOmX_QO9SjOFEtlk5aM61OaeSA6oRFZhGKeBnCJVmo-Q"/>
+</div>
+<span class="absolute -bottom-1 px-1.5 py-0.2 rounded-full bg-secondary-container text-on-secondary font-label-sm text-[9px] font-bold shadow-sm">بث حي</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface truncate max-w-[80px]">مجالس التدبر</span>
+</div>
+<!-- Story 3: Tech Visionary -->
+<div class="flex-shrink-0 flex flex-col items-center gap-2 cursor-pointer group" onclick="navigateToTab('shorts-and-cinema')">
+<div class="relative w-20 h-20 rounded-full p-[2.5px] bg-gradient-to-tr from-primary-container to-surface-container-highest transition-transform duration-300 group-hover:scale-105">
+<div class="w-full h-full rounded-full overflow-hidden bg-surface-container-lowest p-[2px]">
+<img class="w-full h-full rounded-full object-cover" data-alt="Futuristic cybernetic lab engineer with sleek glasses observing holographic data streams in neon teal and violet room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4IbOGpvQDVT3BDuZujmN1ad908rfpdf1w4SShSqO3rGGiP4CsT05F37T6P1HPvPEL8UEt3mxUNTBXwlYRnbHQcztXUw_GpvoqEPByINsbvwZRoxRQJz6W1_SYKyPFbTea8OenScYUHE4wVSVdiMGvBuKST1LFgmcExI7pB2uPhIybVx5KVGF_VMhGSU4gzVRsppFtfyl2y5VRUQL6gTROAEYMgfFVcRAMw9dKnmXZLtc-ynq-hrucnw"/>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface truncate max-w-[80px]">د. طارق تقنية</span>
+</div>
+<!-- Story 4: Cognitive Philosophy -->
+<div class="flex-shrink-0 flex flex-col items-center gap-2 cursor-pointer group">
+<div class="relative w-20 h-20 rounded-full p-[2.5px] bg-gradient-to-tr from-secondary via-secondary-container to-primary transition-transform duration-300 group-hover:scale-105">
+<div class="w-full h-full rounded-full overflow-hidden bg-surface-container-lowest p-[2px]">
+<img class="w-full h-full rounded-full object-cover" data-alt="Dark aesthetic library with antique books, warm candle glow, and floating intellectual thought sketches in deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLg2Y_GGmYqPgmKaAku_O942TgqI08gkCHkNLiPE9crmiIbRwISkr4IYgwF91cTB4qwQiYH13G5t6lwufi_eQeIumI0b5nPrlG-wFiZ0clUCCEXvgKNndjhcmxv9M5rtiPmGfyBVuKzbAbaZIAig2YBC386RU_qq-TCDXgql0dz-y3UkxoJwy2s4RBL3kGaVLrdqTZRd84fJEVktT8HRu2v_Y_Ykk7ODtRceUDadY8kN6IshJnc47W0Q"/>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface truncate max-w-[80px]">رواق الفكر</span>
+</div>
+<!-- Story 5: Nature & Wonder -->
+<div class="flex-shrink-0 flex flex-col items-center gap-2 cursor-pointer group">
+<div class="relative w-20 h-20 rounded-full p-[2.5px] bg-gradient-to-tr from-primary via-tertiary-container to-surface-container-high transition-transform duration-300 group-hover:scale-105">
+<div class="w-full h-full rounded-full overflow-hidden bg-surface-container-lowest p-[2px]">
+<img class="w-full h-full rounded-full object-cover" data-alt="Stunning telescope view of deep space nebula with stellar clouds in sapphire blue, violet, and sparkling cosmic dust" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmw6tPeRON7dOOosKoGw_ePquAyLFujb7DC1v9Wwvc2TO4yXQJdwi2ky_RhpHQ9h8-3OrcNUwQF08O5aXpI3krnHCWTJQQqBsSgTyed7h_Z62dOWLIUjjQC80ebZpsqHuDSjt_wuHNAngH1qZkUtGpcRY_fNFyVuV-zTcTO1ot0V5wpslGT55MBh1cPxbq8IBNhDH6o-NbvMIM7Zlm-qHy9_B9zsMa45bRzVHA-Kc7iNEYIYQJ8OaBfw"/>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface truncate max-w-[80px]">آفاق الكون</span>
+</div>
+<!-- Story 6: Islamic Calligraphy & Art -->
+<div class="flex-shrink-0 flex flex-col items-center gap-2 cursor-pointer group">
+<div class="relative w-20 h-20 rounded-full p-[2.5px] bg-gradient-to-tr from-tertiary to-tertiary-container transition-transform duration-300 group-hover:scale-105">
+<div class="w-full h-full rounded-full overflow-hidden bg-surface-container-lowest p-[2px]">
+<img class="w-full h-full rounded-full object-cover" data-alt="Intricate golden Arabic calligraphy on rich matte obsidian background with delicate light refraction and gilded edges" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAigeIryzsnkxkFBbcB4U_m2Mhn-wJGRKe5_u84YTzUt75BQBOmC_MKNveyHlwSLZC1JrrAIttcCrmBzINDN5ufB24HFYBvXNN2FGs8fAs_sTeUzULmO7v52DhNVh7EyOFzzmn6K37G1Dk9i_58n8ykkUQ7FjyK5XAmXwS4XP34D7DpTjOtTVgNHJMnhwi3yiYf0MbJvKUN7eKSE4IxNdehS7vUF81sAC3SHlBOaO3avo39CrtZhGnp1w"/>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface truncate max-w-[80px]">الخط العربي</span>
+</div>
+</div>
+</section>
+<!-- Main Dynamic 12-Column Layout -->
+<div class="grid grid-cols-12 gap-8 items-start">
+<!-- Primary Feed Column (7 cols on desktop) -->
+<div class="col-span-12 lg:col-span-8 flex flex-col gap-6">
+<!-- Section 2: Universal Composer with OmniGuard Policy Scrim -->
+<div class="relative bg-surface-container-low rounded-xl p-5 shadow-xl overflow-hidden">
+<div class="absolute -right-16 -top-16 w-36 h-36 bg-primary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+<!-- OmniGuard AI Regulatory Safety Header -->
+<div class="mb-4 p-3.5 rounded-lg bg-surface-container-high/70 backdrop-blur-md flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container text-base">verified_user</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-bold text-primary">رقابة OmniGuard AI الفورية</span>
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-lowest px-2.5 py-0.5 rounded-full font-mono">V4.8 Strict</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<strong class="text-secondary-fixed">السياسة الصارمة:</strong> يُحظر قطعيًا رفع المحتوى الهابط، الأفلام الواقعية، أو تقنيات التزييف العميق (Deepfake). <span class="text-tertiary">يُسمح بالأنمي النظيف (مثل المحقق كونان) بشرط خلوّه التام من الموسيقى وحقوق البث</span>. المخالفة تستوجب حظراً فورياً لمدة 7 أيام.
+            </p>
+</div>
+<!-- Composer Text Area -->
+<div class="flex items-start gap-3.5 mb-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary font-bold flex-shrink-0">
+<span class="material-symbols-outlined text-primary-container text-xl">edit_note</span>
+</div>
+<div class="flex-1">
+<textarea class="w-full bg-transparent text-on-surface placeholder:text-on-surface-variant/60 font-body-lg text-body-lg resize-none outline-none leading-relaxed" placeholder="شارك فكرة، تغريدة سريعة، أو حلقة أنمي مرخصة خالية من الموسيقى..." rows="3"></textarea>
+</div>
+</div>
+<!-- Action Buttons & Post Trigger -->
+<div class="flex items-center justify-between pt-3 bg-surface-container-lowest/40 -mx-5 -mb-5 px-5 py-3">
+<div class="flex items-center gap-1">
+<button class="p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary-container transition-colors flex items-center gap-1.5" title="إرفاق فيديو أنمي متوافق">
+<span class="material-symbols-outlined text-lg">movie</span>
+<span class="font-label-sm text-label-sm hidden sm:inline">أنمي منقى</span>
+</button>
+<button class="p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-tertiary-fixed transition-colors flex items-center gap-1.5" title="صورة فوتوغرافية أو انفوجرافيك">
+<span class="material-symbols-outlined text-lg">image</span>
+<span class="font-label-sm text-label-sm hidden sm:inline">وسائط</span>
+</button>
+<button class="p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-secondary-container transition-colors flex items-center gap-1.5" title="إنشاء استطلاع رأي فكري">
+<span class="material-symbols-outlined text-lg">poll</span>
+<span class="font-label-sm text-label-sm hidden sm:inline">استطلاع</span>
+</button>
+<button class="p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1.5" title="فحص ذكاء اصطناعي مسبق">
+<span class="material-symbols-outlined text-lg">policy</span>
+<span class="font-label-sm text-label-sm hidden sm:inline">فحص الأمان</span>
+</button>
+</div>
+<button class="flex items-center gap-2 px-6 py-2 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg font-bold shadow-[0_0_16px_rgba(0,242,254,0.35)] hover:bg-primary-fixed transition-all hover:scale-[1.02] active:scale-[0.98]">
+<span>نشر في النبض</span>
+<span class="material-symbols-outlined text-base rotate-180">send</span>
+</button>
+</div>
+</div>
+<!-- Section 3: Feed Item 1 (Detective Conan Anime Clip - Policy Compliant) -->
+<article class="bg-surface-container-low rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl">
+<!-- Post Author Header -->
+<div class="p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="relative w-11 h-11 rounded-full p-[2px] bg-gradient-to-tr from-primary-container to-secondary-container">
+<div class="w-full h-full rounded-full overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Anime detective silhouette in stylized dark mystery atmosphere with deep blue shadows and clean cinematic composition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSUQzDLhvUPKEc-jMEyvV5QqFt0uVMlgoCkenm9XJUZpW0ahD02yxyKxnyG-EQ2031Ma5tw7jGZNMmUUUqR5f3DcqTlD-2wf0MUYeUnukXkdMYXh8ShfRNYrtTZ-JPaGOtOXR7yv5fzwMTy0g6W7rHl4XGBSEfsmcSrPBkpIhCx_bcvE7GuM2IGz7BP430SHahkQpNQVh5aVHSbYb07v3iaGisdX9YsBssdrxx6idDeQ2nZmq6c2sugw"/>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">أرشيف المحقق كونان الرسمي</span>
+<span class="material-symbols-outlined text-primary-container text-base" title="حساب موثق">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">@ConanArchive_AR</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">منذ 34 دقيقة</span>
+<span class="w-1 h-1 rounded-full bg-on-surface-variant/40"></span>
+<span class="font-label-sm text-label-sm text-primary-fixed">تصنيف: دراما وغموض</span>
+</div>
+</div>
+</div>
+<!-- OmniGuard Certified Badge -->
+<div class="flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-highest text-primary-container shadow-sm">
+<span class="material-symbols-outlined text-sm">shield_with_heart</span>
+<span class="font-label-sm text-label-sm font-bold">معتمد: بدون موسيقى وبدون حقوق</span>
+</div>
+</div>
+<!-- Post Content -->
+<div class="px-4 pb-3">
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+              الحلقة الخاصة: استنتاج كونان الحاسم لكشف خدعة الغرفة المغلقة في برج أوساكا. تم حذف المؤثرات الموسيقية بالكامل واستبدالها بالصوت الطبيعي، الفيديو مرخص ومشاع للاستخدام التعليمي والتحليلي.
+            </p>
+<div class="flex items-center gap-2 mt-2">
+<span class="font-label-sm text-label-sm text-primary-container hover:underline cursor-pointer">#المحقق_كونان</span>
+<span class="font-label-sm text-label-sm text-primary-container hover:underline cursor-pointer">#تحليلات_الغموض</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">#محتوى_نقي</span>
+</div>
+</div>
+<!-- Video Stage (YouTube / Cinema Embed Simulation) -->
+<div class="relative w-full aspect-video bg-surface-container-lowest overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Detailed anime detective scene featuring a brilliant young detective in suit with glasses reflecting light inside a rain-soaked darkened room with intricate evidence diagrams" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0PpuJPlzvgRDy4dMoq7tUeAkU1N8XGL3rnOXjUwcNPjVTTI5NLK1zgoWJ_jpVDn_xg7iDwCw-Okd8dGtF_OZPe4Eg9zT1HV8YCTAe_ScUTavFp6BRVtAJgQ4CbuL0MZMwoA9TSjuwWHA5Eg4vHzHZuo_Q1863VhoikPFE8-3n36sVhjUTBEC4w1mFfRmYXJ3qO9nmpvzzt9fKEC8gZgayYhMyLgm3EbDvIFTCwthXPyrBURiWIQdvyQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent"></div>
+<!-- Video Status Indicators -->
+<div class="absolute top-4 right-4 flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-lowest/80 backdrop-blur-md font-label-sm text-label-sm text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-secondary">volume_off</span>
+<span>الصوت: نقي بدون موسيقى</span>
+</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary font-label-sm text-label-sm font-bold">1080p FHD</span>
+</div>
+<!-- Play Overlay Button -->
+<button class="absolute inset-0 m-auto w-16 h-16 rounded-full bg-primary-container/90 text-on-primary-container flex items-center justify-center shadow-[0_0_30px_rgba(0,242,254,0.6)] group-hover:scale-110 transition-transform" onclick="navigateToTab('shorts-and-cinema')">
+<span class="material-symbols-outlined text-3xl font-bold pr-1">play_arrow</span>
+</button>
+<!-- Video Progress Bar -->
+<div class="absolute bottom-0 left-0 right-0 h-1.5 bg-surface-container-highest">
+<div class="h-full bg-primary-container w-1/3"></div>
+</div>
+</div>
+<!-- Engagement Rail -->
+<div class="px-4 py-3 flex items-center justify-between text-on-surface-variant bg-surface-container">
+<div class="flex items-center gap-6">
+<button class="flex items-center gap-1.5 hover:text-secondary transition-colors group">
+<span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">favorite</span>
+<span class="font-label-md text-label-md">14.8K</span>
+</button>
+<button class="flex items-center gap-1.5 hover:text-primary-container transition-colors group">
+<span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">chat_bubble</span>
+<span class="font-label-md text-label-md">1,204</span>
+</button>
+<button class="flex items-center gap-1.5 hover:text-tertiary-fixed transition-colors group">
+<span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">repeat</span>
+<span class="font-label-md text-label-md">3,980</span>
+</button>
+<button class="flex items-center gap-1.5 hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">share</span>
+<span class="font-label-md text-label-md">مشاركة</span>
+</button>
+</div>
+<button class="hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-lg">bookmark</span>
+</button>
+</div>
+</article>
+<!-- Section 3: Feed Item 2 (Deep Discourse & Thread - X Style) -->
+<article class="bg-surface-container-low rounded-xl p-5 shadow-xl transition-all duration-300 hover:shadow-2xl">
+<div class="flex items-start gap-3.5">
+<div class="relative w-11 h-11 rounded-full p-[2px] bg-gradient-to-tr from-tertiary-container to-primary flex-shrink-0">
+<div class="w-full h-full rounded-full overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Portrait of an intellectual scholar in contemporary attire sitting in a modern study with subtle warm lighting and bookshelf background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo4hIgWDlJo1Hov2xrir_Z5d9qG3B5vplXm5tBavwCTuW7_APcEVeGLGDN4Umza3ft96dSuzlzpRRHtGnGNQV54Q6LK5cvEUgpJ8Me0vH2JqNvmgT8P4-Tw1SMvxwiaU6EAYD02IZ5rSrZBrx4zQyGmiFN_T-CDisbcRvt27JzLa1fM3b4MhHw3Lz6JJcWte8X1UBBCs9HT6B3T1gzjfDfBevQ0SWwl5_mkik-nx4kIK3C5zAUogr0ag"/>
+</div>
+</div>
+<div class="flex-1 flex flex-col gap-2.5">
+<!-- Author Metadata -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">د. يوسف المنصور</span>
+<span class="material-symbols-outlined text-tertiary-container text-base" title="عضو مجلس فكري">stars</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">@Yousef_Mind</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant/60">· 2 س</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-lg">more_horiz</span>
+</button>
+</div>
+<!-- Main Micro-Discourse Content -->
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                الانتباه هو العملة الأغلى في القرن الحادي والعشرين. حين نترك الخوارزميات تضخ السخافات والصدمات الانفعالية، فنحن لا نضيع أوقاتنا فحسب، بل نعيد تشكيل أدمغتنا لتفقد القدرة على التركيز العميق (Deep Work).
+                <br/><br/>
+                وضع منصة OmniPulse لقفل تلقائي لمدة 60 دقيقة في حال التفريط بالورد القرآني هو بمثابة 'جدار ناري روحي ونفسي' يعيد للروح توازنها قبل الغرق في السيل الرقمي.
+              </p>
+<!-- Quote Card Box -->
+<div class="rounded-lg bg-surface-container p-4 mt-1 flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-container text-sm">format_quote</span>
+<span class="font-label-md text-label-md font-bold text-tertiary">مقتبس من كتاب 'العمق المفقود':</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+                  "الإنسان الذي لا يملك زمام صمته، لن يملك أبداً زمام فكرته."
+                </p>
+</div>
+<!-- Interactive Thread Reactions -->
+<div class="flex items-center justify-between pt-3 mt-1 text-on-surface-variant">
+<button class="flex items-center gap-2 hover:text-primary-container transition-colors group">
+<span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">mode_comment</span>
+<span class="font-label-md text-label-md">432 رد تحليلي</span>
+</button>
+<button class="flex items-center gap-2 hover:text-tertiary-fixed transition-colors group">
+<span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">repeat</span>
+<span class="font-label-md text-label-md">1.8K إعادة نشر</span>
+</button>
+<button class="flex items-center gap-2 hover:text-secondary-container transition-colors group">
+<span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">favorite_border</span>
+<span class="font-label-md text-label-md">9.2K</span>
+</button>
+<button class="flex items-center gap-2 hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">analytics</span>
+<span class="font-label-md text-label-md">88K ظهور</span>
+</button>
+<button class="hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-lg">bookmark_border</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Section 3: Feed Item 3 (Scientific & Visual Tech Post - Instagram Carousel Style) -->
+<article class="bg-surface-container-low rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl">
+<div class="p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-full p-[2px] bg-gradient-to-tr from-primary via-surface-tint to-tertiary">
+<div class="w-full h-full rounded-full overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Modern laboratory scientist in dark room analyzing quantum computational crystalline structures with radiant cyan glows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL46Qy1JBOBnJejTLK-5CczwgX2pDHE6kHfOHp2Feb6dAY7xHYCxOzhSPPczZGftOdXo8AmQZ9zDjoykBR8_jG9_HUzx2ahMbpuTYR1nVXAb6mJyEkSM_u3svVpqOu4rj222aVpSM5uBqSCBs1PQsCF7PzpmvpLrBg7ksNkuFR7i8t9ElouyLlX3sEU5Yx5U0wlAwwZ3QXmOKhBcwSPsAIVD6Ab6ZC2M021JPP0AamhaWL3lpTAjgG4A"/>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">مختبرات الحوسبة الكمومية</span>
+<span class="material-symbols-outlined text-primary text-base">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">الرياض، المملكة العربية السعودية · منذ 4 ساعات</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+<!-- Visual Showcase Graphic -->
+<div class="relative w-full h-96 bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="High-resolution visual representation of a photonic quantum computing microchip emitting vivid cyan lasers across circuit pathways on a dark obsidian substrate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlhQgOKruTnwfVc0Vq_XnO8aTaAcTkIL-ExbhJ27JQQ14NoqK9lYqH4qaapVBYgRckEpl88oU-DnFGexz1s5Q_j16UEthqimb2NOhe5m_1Cfg-6d0QeTF6i9lpV7xdzsfY2NFB8XTxobes3hwn-KdvxHayi3gtF7dN0S2p2FfwUZ--d3EBc12JAexrxWkbPoH5ODw7w_j2yEYlAPygezQm0jZjmOIU7ywIeFjrnm9u71qGtwSdYDvZWA"/>
+<!-- Floating Data Overlay Pill -->
+<div class="absolute bottom-4 right-4 bg-surface-container-lowest/85 backdrop-blur-md px-3.5 py-2 rounded-lg flex items-center gap-3 shadow-lg">
+<span class="material-symbols-outlined text-primary-container text-lg">memory</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary-container font-mono">128 QUBITS</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">معالج 'نور-1' الكمومي</span>
+</div>
+</div>
+<!-- Slide Indicator -->
+<div class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-md px-2.5 py-1 rounded-full font-label-sm text-label-sm text-on-surface font-mono">
+              1 / 4
+            </div>
+</div>
+<!-- Description & Comments -->
+<div class="p-4 flex flex-col gap-2">
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+<span class="font-bold text-primary">إنجاز جديد:</span> نجاح التجارب الأولية لتشغيل معالج الحوسبة الضوئية بدون تبريد فائق مستمر. هذا الانتقال سيمكن مراكز البيانات من تقليل استهلاك الطاقة بنسبة 70% وتأمين التشفير السيبراني الكمي غير القابل للاختراق.
+            </p>
+<div class="flex items-center gap-2 text-primary-fixed font-label-sm text-label-sm">
+<span>#حوسبة_كمية</span>
+<span>#تقنية_المستقبل</span>
+<span>#ابتكار_عربي</span>
+</div>
+</div>
+<div class="px-4 py-3 bg-surface-container flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-1.5 hover:text-secondary-container transition-colors">
+<span class="material-symbols-outlined text-xl">favorite</span>
+<span class="font-label-md text-label-md">5,310</span>
+</button>
+<button class="flex items-center gap-1.5 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">chat_bubble</span>
+<span class="font-label-md text-label-md">284</span>
+</button>
+<button class="flex items-center gap-1.5 hover:text-tertiary transition-colors">
+<span class="material-symbols-outlined text-xl">send</span>
+</button>
+</div>
+<button class="hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-xl">bookmark</span>
+</button>
+</div>
+</article>
+</div>
+<!-- Right/Sidebar Contextual Feed (4 cols on desktop) -->
+<aside class="col-span-12 lg:col-span-4 flex flex-col gap-6">
+<!-- Widget 1: Quran Daily Portion (الورد القرآني اليومي - 15 دقيقة) -->
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-b from-surface-container-high to-surface-container-low p-5 shadow-2xl">
+<div class="absolute -left-12 -top-12 w-32 h-32 bg-tertiary-container/15 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Title Bar -->
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-full bg-tertiary-container/20 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">menu_book</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm font-bold text-tertiary">الورد القرآني اليومي</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">المحطة الإيمانية الثابتة</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-tertiary-container text-on-tertiary font-label-md text-label-md font-bold">15 دقيقة</span>
+</div>
+<!-- Progress Visualization Card -->
+<div class="bg-surface-container-lowest/80 rounded-lg p-4 mb-4 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">إنجاز اليوم:</span>
+<span class="font-label-md text-label-md font-bold text-tertiary-fixed font-mono">6 دقائق / 15 دقيقة</span>
+</div>
+<!-- Visual Progress Bar -->
+<div class="w-full bg-surface-container-highest rounded-full h-2.5 overflow-hidden">
+<div class="bg-gradient-to-r from-tertiary-container via-tertiary to-primary-container h-2.5 rounded-full w-[40%] transition-all duration-500 shadow-[0_0_10px_rgba(255,215,97,0.5)]"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant text-body-sm">
+<span class="flex items-center gap-1 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs text-primary-container">done_all</span>
+                سورة الكهف (صفحة 4)
+              </span>
+<span class="font-label-sm text-label-sm text-secondary-fixed flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">hourglass_bottom</span>
+                متبقي 9 دقائق
+              </span>
+</div>
+</div>
+<!-- Urgent Lock Penalty Warning -->
+<div class="p-3.5 rounded-lg bg-surface-container-highest/90 mb-4 flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-container text-xl flex-shrink-0 mt-0.5">lock_clock</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-bold text-secondary-fixed">تنبيه القفل الإجباري (12:00 منتصف الليل)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                في حال لم يتم استكمال الـ 15 دقيقة قبل حلول 12:00 ص، <strong class="text-on-surface">سيتم قفل التطبيق تلقائياً لمدة 60 دقيقة كاملة</strong> وإلزام فتح المصحف الشريف قبل إعادة تفعيل التغذية والريلز.
+              </p>
+</div>
+</div>
+<!-- Read Quran Action Button -->
+<button class="w-full py-3 rounded-lg bg-gradient-to-r from-tertiary-container to-tertiary text-on-tertiary-container font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-lg hover:shadow-[0_0_20px_rgba(255,215,97,0.4)] transition-all cursor-pointer" onclick="navigateToTab('mushaf-reader')">
+<span class="material-symbols-outlined text-lg">auto_stories</span>
+<span>متابعة القراءة الآن (مصحف المدينة)</span>
+</button>
+</div>
+<!-- Widget 2: OmniGuard AI Active Enforcement Desk -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-5 shadow-xl">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-base">gavel</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">سجل إنفاذ OmniGuard AI</h3>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container shadow-[0_0_8px_#ff506e] animate-pulse"></span>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Enforcement Event 1 -->
+<div class="p-3 rounded-lg bg-surface-container flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-secondary-container flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">block</span>
+                  حظر فوري 7 أيام
+                </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">قبل 3 د</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+                تم كشف مقطع Deepfake زائف ونشر لقطات سينمائية غير مرخصة. تم مسح الفيديو فوراً وتجميد حساب <span class="font-mono text-primary-fixed">@cinema_leak9</span>.
+              </p>
+</div>
+<!-- Enforcement Event 2 -->
+<div class="p-3 rounded-lg bg-surface-container flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-secondary-container flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">delete_sweep</span>
+                  حذف محتوى وموسيقى
+                </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">قبل 11 د</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+                استبعاد مقطع شورتس تضمن موسيقى صاخبة غير منقاة. تم إشعار صاحب الحساب لإعادة الرفع بصوت بيئي طبيعي.
+              </p>
+</div>
+<!-- Transparency Metric -->
+<div class="pt-2 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>نسبة الامتثال اليوم: <strong>99.4%</strong></span>
+<a class="text-primary-container hover:underline cursor-pointer" onclick="navigateToTab('settings-and-wellbeing')">لوائح النشر الكاملة</a>
+</div>
+</div>
+</div>
+<!-- Widget 3: Trending Radar & Hashtags (الترند المتصدر) -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-5 shadow-xl">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-lg">trending_up</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">الترند المتصدر في OmniPulse</h3>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-base">settings</span>
+</button>
+</div>
+<div class="flex flex-col gap-3.5">
+<!-- Trend 1 -->
+<div class="flex items-center justify-between cursor-pointer group">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">1 · أنمي وغموض</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary-container transition-colors">#المحقق_كونان</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">142.5K نبضة وتفاعل</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_back</span>
+</div>
+<!-- Trend 2 -->
+<div class="flex items-center justify-between cursor-pointer group" onclick="navigateToTab('mushaf-reader')">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 · تدبر وقرآن</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-tertiary-fixed transition-colors">#سورة_الكهف</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">98.2K تلاوة مسجلة</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-tertiary transition-colors">arrow_back</span>
+</div>
+<!-- Trend 3 -->
+<div class="flex items-center justify-between cursor-pointer group">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 · تقنية وعلوم</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary-container transition-colors">#حوسبة_كمومية_عربية</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">41.7K تغريدة فكرية</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_back</span>
+</div>
+<!-- Trend 4 -->
+<div class="flex items-center justify-between cursor-pointer group" onclick="navigateToTab('settings-and-wellbeing')">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">4 · فكر وأدب</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-secondary-fixed transition-colors">#التركيز_العميق</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">29.4K حوار</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors">arrow_back</span>
+</div>
+</div>
+<button class="w-full mt-4 py-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors text-center">
+            عرض المزيد من الترندات
+          </button>
+</div>
+<!-- Footer Footnotes & Legal Badges -->
+<div class="px-2 flex flex-wrap gap-x-4 gap-y-1.5 text-on-surface-variant/70 font-label-sm text-label-sm">
+<a class="hover:text-primary cursor-pointer" onclick="navigateToTab('stories-and-messages')">الخصوصية وتشفير E2EE</a>
+<a class="hover:text-primary cursor-pointer" onclick="navigateToTab('settings-and-wellbeing')">ميثاق المحتوى النقي</a>
+<a class="hover:text-primary cursor-pointer" onclick="navigateToTab('shorts-and-cinema')">لوائح حماية الأنمي</a>
+<a class="hover:text-primary cursor-pointer" onclick="navigateToTab('settings-and-wellbeing')">ساعات الرفاهية الرقمية</a>
+<span>© 2025 OmniPulse Global</span>
+</div>
+</aside>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= TAB 2: شورتس وسينما (Shorts & Cinema) ================= -->
+<div class="tab-pane" id="pane-shorts-and-cinema">
+<div class="flex flex-col gap-6 w-full">
+<!-- Header of Shorts & Cinema -->
+<div class="flex flex-wrap items-center justify-between gap-4 bg-surface-container-low rounded-xl p-5 border border-outline-variant/20 shadow-xl">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/20 border border-secondary-container/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">movie_filter</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">سينما الشورتس والوثائقيات المنقاة</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">أنمي بدون موسيقى، وثائقيات علمية، وريلز عمودي بحد استهلاك 30 دقيقة يومياً</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-highest border border-secondary/30">
+<span class="material-symbols-outlined text-secondary text-lg">timer</span>
+<span class="font-label-md text-label-md font-bold text-secondary-fixed">الوقت المستهلك: 18 / 30 دقيقة</span>
+</div>
+<button class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-bold shadow-[0_0_15px_rgba(0,242,254,0.3)]">
+<span class="material-symbols-outlined text-base">filter_vintage</span>
+<span>وضع السينما الكامل</span>
+</button>
+</div>
+</div>
+<!-- Active Cinema Canvas + Feed Grid -->
+<div class="grid grid-cols-12 gap-6 items-start">
+<!-- Main Vertical Shorts Viewer (Center Stage) -->
+<div class="col-span-12 lg:col-span-7 flex flex-col gap-4">
+<div class="relative w-full max-w-md mx-auto aspect-[9/16] bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_0_35px_rgba(0,0,0,0.8)] border border-outline-variant/30 flex flex-col justify-between p-5">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Vertical anime mystery thriller frame with rain on glass window and intense eye reflection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0PpuJPlzvgRDy4dMoq7tUeAkU1N8XGL3rnOXjUwcNPjVTTI5NLK1zgoWJ_jpVDn_xg7iDwCw-Okd8dGtF_OZPe4Eg9zT1HV8YCTAe_ScUTavFp6BRVtAJgQ4CbuL0MZMwoA9TSjuwWHA5Eg4vHzHZuo_Q1863VhoikPFE8-3n36sVhjUTBEC4w1mFfRmYXJ3qO9nmpvzzt9fKEC8gZgayYhMyLgm3EbDvIFTCwthXPyrBURiWIQdvyQ"/>
+<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/90 pointer-events-none"></div>
+<!-- Top Overlay Controls -->
+<div class="relative z-10 flex items-center justify-between">
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest/70 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span>خالٍ تماماً من الموسيقى</span>
+</span>
+<div class="flex items-center gap-2">
+<button class="w-8 h-8 rounded-full bg-surface-container-highest/70 backdrop-blur-md text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-base">volume_off</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-highest/70 backdrop-blur-md text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Vertical Action Rails (Left side in RTL) -->
+<div class="absolute left-4 bottom-24 z-20 flex flex-col items-center gap-4">
+<button class="w-12 h-12 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-secondary hover:scale-110 transition-transform flex flex-col items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+</button>
+<span class="font-label-sm text-[11px] font-bold text-on-surface">24.5K</span>
+<button class="w-12 h-12 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-primary hover:scale-110 transition-transform flex flex-col items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-2xl">mode_comment</span>
+</button>
+<span class="font-label-sm text-[11px] font-bold text-on-surface">840</span>
+<button class="w-12 h-12 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-tertiary hover:scale-110 transition-transform flex flex-col items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-2xl">share</span>
+</button>
+<span class="font-label-sm text-[11px] font-bold text-on-surface">مشاركة</span>
+</div>
+<!-- Bottom Meta Info -->
+<div class="relative z-10 flex flex-col gap-2 max-w-[80%]">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-full ring-2 ring-primary-container overflow-hidden">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvVZcSBji1pyW8EpsbIuxedd61PYSU7OQVdifFe4PDdkuHDJGKpLG_k4Q0C04ESsTpKeF_0DDugbFd2oyBsdquCFLClYfv0WYatMRA6AB7doI8n2qqEIQDWS_igms7E5_xDWeKny9JjhGBamL25zc5YKldoTbWZaK0GjTu7qafei2CUSuFhkCYrx9u1Ei0Af8OhSckcKMZwsqLI_YL0-Z8qHNlq9eiS58ZoZuhnS6CtabWqbltxxVkYQ"/>
+</div>
+<span class="font-headline-sm text-sm font-bold text-primary">المحقق كونان · الحلقة 1045</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container text-[10px] font-bold">مُفحص</span>
+</div>
+<p class="font-body-md text-xs text-on-surface leading-relaxed">
+              لحظة استنتاج هوية المجرم عبر خدعة انعكاس زجاج الساعة المائي. الصوت أصلي بمؤثرات الطبيعة فقط بدون بيانو أو طبول.
+            </p>
+<div class="w-full h-1 bg-surface-container-highest/60 rounded-full mt-2 overflow-hidden">
+<div class="w-2/3 h-full bg-primary-container"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Cinema Library Playlist (Right side) -->
+<div class="col-span-12 lg:col-span-5 flex flex-col gap-4">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">video_library</span>
+<span>قائمة المشاهدة المختارة لك</span>
+</h3>
+<!-- Cinema Card 1 -->
+<div class="flex gap-3 bg-surface-container-low p-3 rounded-xl border border-outline-variant/20 hover:border-primary/40 transition-all cursor-pointer group">
+<div class="relative w-32 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL46Qy1JBOBnJejTLK-5CczwgX2pDHE6kHfOHp2Feb6dAY7xHYCxOzhSPPczZGftOdXo8AmQZ9zDjoykBR8_jG9_HUzx2ahMbpuTYR1nVXAb6mJyEkSM_u3svVpqOu4rj222aVpSM5uBqSCBs1PQsCF7PzpmvpLrBg7ksNkuFR7i8t9ElouyLlX3sEU5Yx5U0wlAwwZ3QXmOKhBcwSPsAIVD6Ab6ZC2M021JPP0AamhaWL3lpTAjgG4A"/>
+<span class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-black/80 font-mono text-[10px] text-on-surface">14:20</span>
+</div>
+<div class="flex flex-col justify-between py-0.5">
+<span class="font-label-md text-label-md font-bold text-on-surface group-hover:text-primary transition-colors">وثائقي: ثورة المعالجات الضوئية وتخزين الفوتونات</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">مختبرات الحوسبة المتقدمة · 84K مشاهدة</span>
+<span class="font-label-sm text-[10px] text-tertiary-container font-medium">معتمد: خالٍ من الموسيقى</span>
+</div>
+</div>
+<!-- Cinema Card 2 -->
+<div class="flex gap-3 bg-surface-container-low p-3 rounded-xl border border-outline-variant/20 hover:border-primary/40 transition-all cursor-pointer group">
+<div class="relative w-32 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmw6tPeRON7dOOosKoGw_ePquAyLFujb7DC1v9Wwvc2TO4yXQJdwi2ky_RhpHQ9h8-3OrcNUwQF08O5aXpI3krnHCWTJQQqBsSgTyed7h_Z62dOWLIUjjQC80ebZpsqHuDSjt_wuHNAngH1qZkUtGpcRY_fNFyVuV-zTcTO1ot0V5wpslGT55MBh1cPxbq8IBNhDH6o-NbvMIM7Zlm-qHy9_B9zsMa45bRzVHA-Kc7iNEYIYQJ8OaBfw"/>
+<span class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-black/80 font-mono text-[10px] text-on-surface">21:05</span>
+</div>
+<div class="flex flex-col justify-between py-0.5">
+<span class="font-label-md text-label-md font-bold text-on-surface group-hover:text-primary transition-colors">عجائب السدم الكونية وبداية تخلّق النجوم</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">منصة آفاق الكون · 120K مشاهدة</span>
+<span class="font-label-sm text-[10px] text-tertiary-container font-medium">سلسلة تدبر الفضاء</span>
+</div>
+</div>
+<!-- Cinema Card 3 -->
+<div class="flex gap-3 bg-surface-container-low p-3 rounded-xl border border-outline-variant/20 hover:border-primary/40 transition-all cursor-pointer group">
+<div class="relative w-32 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAigeIryzsnkxkFBbcB4U_m2Mhn-wJGRKe5_u84YTzUt75BQBOmC_MKNveyHlwSLZC1JrrAIttcCrmBzINDN5ufB24HFYBvXNN2FGs8fAs_sTeUzULmO7v52DhNVh7EyOFzzmn6K37G1Dk9i_58n8ykkUQ7FjyK5XAmXwS4XP34D7DpTjOtTVgNHJMnhwi3yiYf0MbJvKUN7eKSE4IxNdehS7vUF81sAC3SHlBOaO3avo39CrtZhGnp1w"/>
+<span class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-black/80 font-mono text-[10px] text-on-surface">09:44</span>
+</div>
+<div class="flex flex-col justify-between py-0.5">
+<span class="font-label-md text-label-md font-bold text-on-surface group-hover:text-primary transition-colors">جماليات الخط الثلث وهندسة الحروف العربية</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">أكاديمية الفنون الإسلامية · 45K مشاهدة</span>
+<span class="font-label-sm text-[10px] text-tertiary-container font-medium">أصوات أقلام البوص الطبيعية</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= TAB 3: القصص والرسائل (Stories & E2EE Messages) ================= -->
+<div class="tab-pane" id="pane-stories-and-messages">
+<div class="grid grid-cols-12 gap-6 h-[calc(100vh-140px)]">
+<!-- Conversations List (4 cols) -->
+<div class="col-span-12 md:col-span-4 bg-surface-container-low rounded-xl p-4 border border-outline-variant/20 flex flex-col gap-3 h-full overflow-hidden">
+<div class="flex items-center justify-between pb-2 border-b border-outline-variant/20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">chat_bubble</span>
+<h2 class="font-headline-sm text-lg font-bold text-on-surface">الرسائل المشفرة E2EE</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-[11px] font-bold">256-bit</span>
+</div>
+<div class="relative">
+<input class="w-full py-1.5 pr-8 pl-3 bg-surface-container-high rounded-lg text-xs text-on-surface placeholder:text-on-surface-variant/50 outline-none" placeholder="بحث في المحادثات المشفرة..." type="text"/>
+<span class="material-symbols-outlined absolute right-2 top-1.5 text-base text-on-surface-variant">search</span>
+</div>
+<!-- Chats Scroll List -->
+<div class="flex flex-col gap-2 overflow-y-auto flex-1 pr-1">
+<!-- Chat 1 -->
+<div class="flex items-center gap-3 p-2.5 rounded-lg bg-surface-container-highest/60 border border-primary-container/20 cursor-pointer">
+<div class="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo4hIgWDlJo1Hov2xrir_Z5d9qG3B5vplXm5tBavwCTuW7_APcEVeGLGDN4Umza3ft96dSuzlzpRRHtGnGNQV54Q6LK5cvEUgpJ8Me0vH2JqNvmgT8P4-Tw1SMvxwiaU6EAYD02IZ5rSrZBrx4zQyGmiFN_T-CDisbcRvt27JzLa1fM3b4MhHw3Lz6JJcWte8X1UBBCs9HT6B3T1gzjfDfBevQ0SWwl5_mkik-nx4kIK3C5zAUogr0ag"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-400 ring-1 ring-black"></span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-sm font-bold text-on-surface truncate">د. يوسف المنصور</span>
+<span class="text-[10px] text-on-surface-variant">10:45 ص</span>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant truncate">تم إتمام مراجعة المخطوطة الفكرية بعناية...</p>
+</div>
+</div>
+<!-- Chat 2 -->
+<div class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-surface-container-high cursor-pointer transition-colors">
+<div class="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4IbOGpvQDVT3BDuZujmN1ad908rfpdf1w4SShSqO3rGGiP4CsT05F37T6P1HPvPEL8UEt3mxUNTBXwlYRnbHQcztXUw_GpvoqEPByINsbvwZRoxRQJz6W1_SYKyPFbTea8OenScYUHE4wVSVdiMGvBuKST1LFgmcExI7pB2uPhIybVx5KVGF_VMhGSU4gzVRsppFtfyl2y5VRUQL6gTROAEYMgfFVcRAMw9dKnmXZLtc-ynq-hrucnw"/>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-sm font-bold text-on-surface truncate">د. طارق تقنية</span>
+<span class="text-[10px] text-on-surface-variant">أمس</span>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant truncate">المعالج الضوئي حقق معدل نقل بيانات مذهل</p>
+</div>
+</div>
+<!-- Chat 3 -->
+<div class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-surface-container-high cursor-pointer transition-colors">
+<div class="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtq5dJ4p1Ueeag40X2j2WL9oUba3PTU8PSYX4UflgSorXtvvHWkXLsIc5DPR-q6vaVBY8oHyg-fPs2X330o3tAcotGLxZaNvYUUBTje-pNIJHgbktc1hRPWrD9vdiWA6TMp9tUBMer8PpBiWzXhJ8qkT18E5qH5w5eQQGClgdhRe8WdYQz68XN00QQ5KZEQIAf-MZjnCHDuQKOmX_QO9SjOFEtlk5aM61OaeSA6oRFZhGKeBnCJVmo-Q"/>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-sm font-bold text-on-surface truncate">مجلس التدبر القرآني</span>
+<span class="text-[10px] text-on-surface-variant">الخميس</span>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant truncate">موعد حلقة التدبر اليوم بعد صلاة العشاء</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Chat Conversation Room (8 cols) -->
+<div class="col-span-12 md:col-span-8 bg-surface-container-low rounded-xl border border-outline-variant/20 flex flex-col h-full overflow-hidden">
+<!-- Conversation Header -->
+<div class="p-4 bg-surface-container flex items-center justify-between border-b border-outline-variant/20">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden ring-2 ring-primary-container/40">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo4hIgWDlJo1Hov2xrir_Z5d9qG3B5vplXm5tBavwCTuW7_APcEVeGLGDN4Umza3ft96dSuzlzpRRHtGnGNQV54Q6LK5cvEUgpJ8Me0vH2JqNvmgT8P4-Tw1SMvxwiaU6EAYD02IZ5rSrZBrx4zQyGmiFN_T-CDisbcRvt27JzLa1fM3b4MhHw3Lz6JJcWte8X1UBBCs9HT6B3T1gzjfDfBevQ0SWwl5_mkik-nx4kIK3C5zAUogr0ag"/>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-sm font-bold text-on-surface">د. يوسف المنصور</span>
+<span class="font-body-sm text-[11px] text-emerald-400 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              متصل الآن · مفتاح التشفير متطابق E2EE
+            </span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<button class="p-2 hover:bg-surface-container-high rounded-full"><span class="material-symbols-outlined text-lg">call</span></button>
+<button class="p-2 hover:bg-surface-container-high rounded-full"><span class="material-symbols-outlined text-lg">videocam</span></button>
+<button class="p-2 hover:bg-surface-container-high rounded-full"><span class="material-symbols-outlined text-lg">lock</span></button>
+</div>
+</div>
+<!-- Messages Thread Canvas -->
+<div class="flex-1 p-5 overflow-y-auto flex flex-col gap-3 bg-surface-container-lowest/30">
+<div class="mx-auto px-3 py-1 rounded-full bg-surface-container-highest text-on-surface-variant text-[11px] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs text-primary">lock</span>
+<span>هذه المحادثة مشفرة بنظام التعمية التام بين الطرفين OmniCrypt</span>
+</div>
+<!-- Incoming Msg -->
+<div class="flex flex-col items-start max-w-[70%]">
+<div class="bg-surface-container-high text-on-surface p-3.5 rounded-2xl rounded-tr-none text-sm leading-relaxed">
+            السلام عليكم ورحمة الله. اطلعت على المقترح الخاص بآلية قفل المنصة عند التفريط بالورد القرآني، خطوة عبقرية لحفظ توازن الإنسان في عصر التشتت!
+          </div>
+<span class="text-[10px] text-on-surface-variant/70 mt-1 px-1">10:42 ص</span>
+</div>
+<!-- Outgoing Msg -->
+<div class="flex flex-col items-end self-end max-w-[70%]">
+<div class="bg-primary-container text-on-primary-container p-3.5 rounded-2xl rounded-tl-none text-sm leading-relaxed font-medium shadow-[0_0_12px_rgba(0,242,254,0.2)]">
+            وعليكم السلام دكتور يوسف. نهدف من خلال OmniPulse إلى استرداد التركيز والانضباط النفسي، وليس مجرد تطبيق تواصل آخر.
+          </div>
+<span class="text-[10px] text-on-surface-variant/70 mt-1 px-1">10:45 ص · مقروءة</span>
+</div>
+</div>
+<!-- Message Input -->
+<div class="p-3 bg-surface-container flex items-center gap-2 border-t border-outline-variant/20">
+<button class="p-2 text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-xl">attach_file</span></button>
+<button class="p-2 text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-xl">mic</span></button>
+<input class="flex-1 bg-surface-container-high rounded-full py-2 px-4 text-sm text-on-surface placeholder:text-on-surface-variant/50 outline-none" placeholder="اكتب رسالة مشفرة..." type="text"/>
+<button class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center hover:scale-105 transition-transform"><span class="material-symbols-outlined text-xl rotate-180">send</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= TAB 4: القرآن الكريم والورد (Mushaf Reader & Daily Portion) ================= -->
+<div class="tab-pane" id="pane-mushaf-reader">
+<div class="flex flex-col gap-6 w-full">
+<!-- Quran Header Bar -->
+<div class="flex flex-wrap items-center justify-between gap-4 bg-gradient-to-l from-surface-container-high via-surface-container-low to-surface-container-lowest p-5 rounded-2xl border border-tertiary-container/30 shadow-2xl">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container/20 border border-tertiary-container/40 flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined text-2xl">auto_stories</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md font-bold text-tertiary">مصحف الورد اليومي المنضبط</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">الورد المطلوب: 15 دقيقة يومياً قبل منتصف الليل لتجنب قفل التغذية والريلز</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex flex-col items-end">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-base font-bold text-tertiary-container font-mono">06:00 / 15:00 د</span>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+</div>
+<span class="text-xs text-secondary-fixed">متبقي 9 دقائق لفك القفل المسائي</span>
+</div>
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-tertiary-container to-tertiary text-on-tertiary-container font-label-md text-label-md font-bold shadow-[0_0_15px_rgba(255,215,97,0.35)]">
+<span class="material-symbols-outlined text-base">play_arrow</span>
+<span>بدء احتساب الورد (مؤقت حي)</span>
+</button>
+</div>
+</div>
+<!-- Mushaf Reader View Container -->
+<div class="grid grid-cols-12 gap-6 items-start">
+<!-- Surah Selection & Navigation (4 cols) -->
+<div class="col-span-12 lg:col-span-4 bg-surface-container-low rounded-xl p-4 border border-outline-variant/20 flex flex-col gap-4">
+<div class="flex items-center justify-between pb-2 border-b border-outline-variant/20">
+<span class="font-headline-sm text-sm font-bold text-on-surface">فهرس السور والأجزاء</span>
+<span class="text-xs text-tertiary-container">سورة الكهف (18)</span>
+</div>
+<div class="flex flex-col gap-2 max-h-[460px] overflow-y-auto pr-1">
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between cursor-pointer hover:bg-surface-container-highest transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface-variant font-mono text-xs flex items-center justify-center">1</span>
+<span class="font-headline-sm text-sm font-bold text-on-surface">سورة الفاتحة</span>
+</div>
+<span class="text-xs text-on-surface-variant">7 آيات · مكية</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between cursor-pointer hover:bg-surface-container-highest transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface-variant font-mono text-xs flex items-center justify-center">2</span>
+<span class="font-headline-sm text-sm font-bold text-on-surface">سورة البقرة</span>
+</div>
+<span class="text-xs text-on-surface-variant">286 آية · مدنية</span>
+</div>
+<div class="p-3 rounded-lg bg-tertiary-container/15 border border-tertiary-container/40 flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-2.5">
+<span class="w-7 h-7 rounded-full bg-tertiary-container text-on-tertiary font-mono text-xs flex items-center justify-center font-bold">18</span>
+<span class="font-headline-sm text-sm font-bold text-tertiary">سورة الكهف (ورد اليوم)</span>
+</div>
+<span class="text-xs text-tertiary-container font-bold">110 آيات · مكية</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between cursor-pointer hover:bg-surface-container-highest transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface-variant font-mono text-xs flex items-center justify-center">36</span>
+<span class="font-headline-sm text-sm font-bold text-on-surface">سورة يس</span>
+</div>
+<span class="text-xs text-on-surface-variant">83 آية · مكية</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between cursor-pointer hover:bg-surface-container-highest transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface-variant font-mono text-xs flex items-center justify-center">67</span>
+<span class="font-headline-sm text-sm font-bold text-on-surface">سورة الملك</span>
+</div>
+<span class="text-xs text-on-surface-variant">30 آية · مكية</span>
+</div>
+</div>
+<!-- Audio Player Widget -->
+<div class="p-3.5 rounded-xl bg-surface-container-highest/70 flex flex-col gap-2 mt-2">
+<div class="flex items-center justify-between text-xs text-on-surface">
+<span class="font-bold flex items-center gap-1.5 text-tertiary">
+<span class="material-symbols-outlined text-sm">headphones</span>
+              القارئ: الشيخ عبد الباسط عبد الصمد
+            </span>
+<span class="font-mono text-on-surface-variant">04:12 / 12:45</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="w-1/3 bg-tertiary-container h-full"></div>
+</div>
+</div>
+</div>
+<!-- Sacred Mushaf Display Canvas (8 cols) -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-lowest rounded-2xl p-8 border border-tertiary-container/30 shadow-2xl relative overflow-hidden flex flex-col items-center">
+<!-- Calligraphic Surah Frame -->
+<div class="w-full py-3 px-6 rounded-xl bg-gradient-to-r from-tertiary-container/20 via-surface-container-high to-tertiary-container/20 border border-tertiary-container/40 flex items-center justify-between mb-8">
+<span class="font-quran text-sm text-tertiary">الجزء الخامس عشر</span>
+<span class="font-quran text-xl font-bold text-tertiary-fixed tracking-wide">سُورَةُ الكَهْفِ</span>
+<span class="font-quran text-sm text-tertiary">الصفحة ٢٩٣</span>
+</div>
+<!-- Bismillah -->
+<div class="font-quran text-2xl text-tertiary-fixed font-bold mb-8 text-center tracking-wider">
+          بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+        </div>
+<!-- Verses Text Canvas -->
+<div class="font-quran text-2xl md:text-3xl text-on-surface leading-[2.6] text-center max-w-2xl px-4">
+          ٱلْحَمْدُ لِلَّهِ ٱلَّذِىٓ أَنزَلَ عَلَىٰ عَبْدِهِ ٱلْكِتَٰبَ وَلَمْ يَجْعَل لَّهُۥ عِوَجَاۜ <span class="text-tertiary-container text-xl font-mono mx-1">﴿١﴾</span>
+          قَيِّمًا لِّيُنذِرَ بَأْسًا شَدِيدًا مِّن لَّدُنْهُ وَيُبَشِّرَ ٱلْمُؤْمِنِينَ ٱلَّذِينَ يَعْمَلُونَ ٱلصَّٰلِحَٰتِ أَنَّ لَهُمْ أَجْرًا حَسَنًا <span class="text-tertiary-container text-xl font-mono mx-1">﴿٢﴾</span>
+          مَّٰكِثِينَ فِيهِ أَبَدًا <span class="text-tertiary-container text-xl font-mono mx-1">﴿٣﴾</span>
+          وَيُنذِرَ ٱلَّذِينَ قَالُوا۟ ٱتَّخَذَ ٱللَّهُ وَلَدًا <span class="text-tertiary-container text-xl font-mono mx-1">﴿٤﴾</span>
+          مَّا لَهُم بِهِۦ مِنْ عِلْمٍ وَلَا لِءَابَآئِهِمْ ۚ كَبُرَتْ كَلِمَةً تَخْرُجُ مِنْ أَفْوَٰهِهِمْ ۚ إِن يَقُولُونَ إِلَّا كَذِبًا <span class="text-tertiary-container text-xl font-mono mx-1">﴿٥﴾</span>
+</div>
+<!-- Mushaf Bottom Navigator -->
+<div class="w-full flex items-center justify-between pt-8 mt-8 border-t border-outline-variant/20">
+<button class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface text-sm transition-colors">
+<span class="material-symbols-outlined text-base">chevron_right</span>
+<span>الصفحة السابقة</span>
+</button>
+<span class="text-xs text-on-surface-variant font-mono">صفحة 293 من 604</span>
+<button class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface text-sm transition-colors">
+<span>الصفحة التالية</span>
+<span class="material-symbols-outlined text-base">chevron_left</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= TAB 5: الإعدادات والرفاهية (Settings & Digital Wellbeing) ================= -->
+<div class="tab-pane" id="pane-settings-and-wellbeing">
+<div class="flex flex-col gap-6 w-full max-w-4xl mx-auto">
+<!-- Header -->
+<div class="bg-surface-container-low rounded-xl p-5 border border-outline-variant/20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 border border-primary-container/40 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-2xl">security</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">الإعدادات والرفاهية الرقمية المنضبطة</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">التحكم في فترات القفل، معايير OmniGuard AI للرقابة الصارمة، وحصانة الوقت</span>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 font-label-sm text-xs font-bold border border-emerald-500/30">النظام محمي بالكامل</span>
+</div>
+<!-- Setting Card 1: Daily Quran Lockdown Rules -->
+<div class="bg-surface-container-low rounded-xl p-6 border border-outline-variant/20 flex flex-col gap-4 shadow-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-tertiary-container text-xl">lock_clock</span>
+<h3 class="font-headline-sm text-lg font-bold text-tertiary">نظام القفل الإجباري للورد القرآني</h3>
+</div>
+<div class="w-12 h-6 bg-primary-container rounded-full relative p-0.5 cursor-pointer">
+<div class="w-5 h-5 rounded-full bg-surface-container-lowest ml-auto shadow"></div>
+</div>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+        في حال حلول الساعة 12:00 منتصف الليل دون استكمال 15 دقيقة من قراءة القرآن الكريم، تُغلق المنصة بالكامل (الخلاصة وسينما الشورتس والرسائل) لمدة 60 دقيقة ولا يُسمح بالاستخدام إلا بعد فتح المصحف.
+      </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+<div class="p-3 rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="text-xs text-on-surface-variant">مدة الورد اليومي</span>
+<span class="font-bold text-sm text-tertiary">15 دقيقة (إجباري)</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="text-xs text-on-surface-variant">توقيت الحظر النهائي</span>
+<span class="font-bold text-sm text-secondary">12:00 ص يومياً</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="text-xs text-on-surface-variant">عقوبة عدم الإتمام</span>
+<span class="font-bold text-sm text-secondary-fixed">قفل تام 60 دقيقة</span>
+</div>
+</div>
+</div>
+<!-- Setting Card 2: Shorts & Reels Daily Cap -->
+<div class="bg-surface-container-low rounded-xl p-6 border border-outline-variant/20 flex flex-col gap-4 shadow-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-xl">timer_off</span>
+<h3 class="font-headline-sm text-lg font-bold text-secondary-fixed">الحد الأقصى اليومي لسينما الشورتس</h3>
+</div>
+<span class="font-mono text-sm font-bold text-secondary-container">30 دقيقة / يوم</span>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+        لمنع الإدمان والانسياق السلبي خلف التمرير اللا نهائي، يتم حظر مشغل الشورتس فور بلوغ 30 دقيقة استهلاك خلال الـ 24 ساعة.
+      </p>
+<div class="w-full bg-surface-container-highest rounded-full h-3 overflow-hidden">
+<div class="w-[60%] bg-gradient-to-r from-secondary to-secondary-container h-full"></div>
+</div>
+<div class="flex justify-between text-xs text-on-surface-variant">
+<span>مستهلك اليوم: 18 دقيقة</span>
+<span>متبقي: 12 دقيقة فقط</span>
+</div>
+</div>
+<!-- Setting Card 3: OmniGuard AI Filter Strictness -->
+<div class="bg-surface-container-low rounded-xl p-6 border border-outline-variant/20 flex flex-col gap-4 shadow-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-xl">verified_user</span>
+<h3 class="font-headline-sm text-lg font-bold text-primary">مستوى صرامة مرشح OmniGuard AI</h3>
+</div>
+<span class="px-2.5 py-1 rounded bg-primary-container/20 text-primary font-mono text-xs font-bold">صارم جداً (Strict V4.8)</span>
+</div>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container cursor-pointer">
+<input checked="" class="accent-primary-container" name="guard-level" type="radio"/>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-on-surface">النمط النقي الفائق (الافتراضي)</span>
+<span class="text-xs text-on-surface-variant">حظر تلقائي للأفلام، الموسيقى، والوجوه المولدة اصطناعياً (Deepfake) دون استثناء.</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container cursor-pointer">
+<input class="accent-primary-container" name="guard-level" type="radio"/>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-on-surface">استثناء الأنمي النظيف المرخص (المحقق كونان)</span>
+<span class="text-xs text-on-surface-variant">السماح بمشاهد الأنمي التعليمية والغموض بعد التحقق من نزع الأصوات الموسيقية بالكامل.</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+</div>
+</main></div>
+<script>
+  // Unified Interactive Navigation Logic
+  function navigateToTab(tabId) {
+    // 1. Hide all tab panes
+    const panes = document.querySelectorAll('.tab-pane');
+    panes.forEach(pane => {
+      pane.classList.remove('active-pane');
+    });
+
+    // 2. Show targeted tab pane
+    const targetPane = document.getElementById('pane-' + tabId);
+    if (targetPane) {
+      targetPane.classList.add('active-pane');
+    }
+
+    // 3. Update sidebar active state
+    const navButtons = document.querySelectorAll('#sidebarNav .nav-btn');
+    navButtons.forEach(btn => {
+      const btnTab = btn.getAttribute('data-tab');
+      if (btnTab === tabId) {
+        btn.className = "nav-btn flex items-center gap-3 px-3.5 py-3 rounded-lg transition-all group bg-surface-container-highest text-primary font-bold shadow-[inset_0_0_12px_rgba(0,242,254,0.15)] border-r-2 border-primary-container";
+        btn.setAttribute('aria-current', 'page');
+      } else {
+        btn.className = "nav-btn flex items-center gap-3 px-3.5 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group";
+        btn.removeAttribute('aria-current');
+      }
+    });
+
+    // 4. Scroll smoothly to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Bind Sidebar Nav Click Events
+  document.addEventListener('DOMContentLoaded', () => {
+    const navButtons = document.querySelectorAll('#sidebarNav .nav-btn');
+    navButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const tab = btn.getAttribute('data-tab');
+        if (tab) {
+          navigateToTab(tab);
+        }
+      });
+    });
+
+    // Story horizontally scroll logic
+    const track = document.getElementById('storiesTrack');
+    const btnRight = document.getElementById('storyScrollRight');
+    const btnLeft = document.getElementById('storyScrollLeft');
+
+    if (track && btnRight && btnLeft) {
+      btnRight.addEventListener('click', () => {
+        track.scrollBy({ left: 240, behavior: 'smooth' });
+      });
+      btnLeft.addEventListener('click', () => {
+        track.scrollBy({ left: -240, behavior: 'smooth' });
+      });
+    }
+  });
+</script><!-- OmniPulse local messaging + video uploader -->
+<style>
+#op-tools{position:fixed;left:16px;bottom:16px;z-index:99999;display:flex;gap:8px;flex-wrap:wrap;font-family:Arial,sans-serif;direction:rtl}
+#op-tools button,#op-panel button{border:0;border-radius:999px;padding:10px 14px;background:#00e8f2;color:#06272a;font-weight:700;cursor:pointer;box-shadow:0 4px 18px #00e8f244}
+#op-panel{position:fixed;left:16px;bottom:72px;width:min(420px,calc(100vw - 32px));max-height:72vh;overflow:auto;z-index:100000;display:none;background:#191820;color:#f3f4f6;border:1px solid #3a4950;border-radius:18px;padding:16px;box-shadow:0 16px 50px #0009;font-family:Arial,sans-serif;direction:rtl}
+#op-panel h3{margin:0 0 12px;font-size:18px}#op-panel input,#op-panel textarea{box-sizing:border-box;width:100%;border:1px solid #3a4950;border-radius:10px;background:#24232b;color:white;padding:10px;margin:6px 0 10px;font:inherit}#op-panel textarea{min-height:75px;resize:vertical}#op-panel .op-muted{color:#aab7bc;font-size:12px;line-height:1.6}#op-panel .op-tabs{display:flex;gap:8px;margin-bottom:12px}#op-panel .op-tabs button{flex:1;padding:9px 6px}#op-panel .op-entry{background:#24232b;border-radius:12px;padding:10px;margin:8px 0;overflow-wrap:anywhere}#op-panel video{width:100%;max-height:280px;border-radius:10px;background:#000}#op-panel .op-close{float:left;background:#35343c;color:white;box-shadow:none}#op-videos-feed{max-width:900px;margin:20px auto;padding:0 16px;display:grid;gap:16px;direction:rtl}#op-panel select{font:inherit} .op-like-btn{display:inline-flex;align-items:center;gap:7px;margin-top:10px;padding:8px 14px!important;border-radius:999px!important;background:#30202a!important;color:#ff668a!important;box-shadow:none!important}.op-like-btn.liked{background:#572236!important;color:#ffb3c7!important}.op-delete-btn{display:inline-flex;align-items:center;gap:6px;margin:10px 8px 0 0;padding:8px 14px!important;border-radius:999px!important;background:#492126!important;color:#ffc1c1!important;box-shadow:none!important}.op-kind{display:inline-block;font-size:12px;color:#00e8f2;border:1px solid #3a4950;border-radius:999px;padding:3px 9px;margin:0 0 8px}
+
+#op-panel .op-menu-btn{background:#302f38!important;color:#fff!important;box-shadow:none!important;padding:7px 12px!important;margin-top:8px}.op-overflow-wrap{position:relative;display:flex;justify-content:flex-start;width:100%;margin:0 0 8px 0}.op-overflow-menu{display:none;position:absolute;top:42px;left:0;min-width:170px;background:#25242c;border:1px solid #4b4a55;border-radius:12px;padding:6px;z-index:20;box-shadow:0 8px 24px #0009}.op-overflow-menu.open{display:grid;gap:5px}.op-overflow-menu button{border:0;border-radius:8px;padding:9px 10px;text-align:right;background:#373640;color:#fff;cursor:pointer}.op-overflow-menu button.danger{background:#70252b;color:#fff}#op-videos-feed .op-entry{position:relative}#op-videos-feed video{display:block;width:100%;max-height:72vh;object-fit:contain;background:#000;border-radius:12px}
+@media(max-width:600px){#op-tools{left:8px;right:8px;bottom:calc(8px + env(safe-area-inset-bottom));justify-content:center}#op-tools button{font-size:13px;padding:9px 11px}#op-panel{left:8px;right:8px;bottom:calc(64px + env(safe-area-inset-bottom));width:auto;max-height:76vh}#op-videos-feed{padding-left:8px;padding-right:8px}}
+</style>
+<div id="op-tools"><button type="button" id="op-open-login">🔐 تسجيل الدخول</button><button type="button" id="op-open-account">👤 حسابي</button><button type="button" id="op-open-messages">✉ الرسائل</button><button type="button" id="op-open-video">＋ إضافة فيديو</button></div>
+<section id="op-panel" aria-live="polite">
+<button class="op-close" type="button" id="op-close">إغلاق ✕</button>
+<h3>OmniPulse · أدوات تجريبية</h3>
+<div class="op-tabs"><button type="button" id="op-tab-login">تسجيل الدخول</button><button type="button" id="op-tab-account">حسابي</button><button type="button" id="op-tab-msg">الرسائل</button><button type="button" id="op-tab-video">إضافة فيديو</button></div>
+<div id="op-login-area" hidden><p class="op-muted">تسجيل دخول تجريبي محلي فقط. لا تدخل كلمة مرور حقيقية؛ هذه النسخة لا تحتوي على نظام حسابات آمن أو خادم مصادقة.</p><label for="op-login-name">اسم المستخدم</label><input id="op-login-name" maxlength="40" autocomplete="username" placeholder="اسم المستخدم أو الاسم الظاهر"><label for="op-login-email">البريد الإلكتروني (اختياري)</label><input id="op-login-email" maxlength="120" type="email" autocomplete="email" placeholder="name@example.com"><button type="button" id="op-login-submit">متابعة</button><button type="button" id="op-logout" hidden>تسجيل الخروج</button><p id="op-login-status" class="op-muted" role="status"></p></div>
+<div id="op-account-area" hidden><p class="op-muted">إدارة حسابك التجريبي على هذا المتصفح فقط.</p><label for="op-account-name">اسم الحساب</label><input id="op-account-name" maxlength="40" placeholder="اكتب اسمك"><button type="button" id="op-save-account">حفظ الاسم</button><p id="op-account-status" class="op-muted"></p></div>
+<div id="op-msg-area"><p class="op-muted">هذه نسخة تجريبية محلية: الرسائل تُحفظ في هذا المتصفح فقط، ولا تصل لمستخدمين آخرين حتى توصيل خادم وقاعدة بيانات.</p><label for="op-sender">اسمك</label><input id="op-sender" maxlength="40" placeholder="اسمك أو لقبك"><label for="op-message">اكتب رسالتك</label><textarea id="op-message" maxlength="2000" placeholder="اكتب رسالة..."></textarea><button type="button" id="op-send-message">إرسال الرسالة</button><div id="op-message-list"></div></div>
+<div id="op-video-area" hidden><p class="op-muted">اختر فيديو من جهازك. سيظهر في صفحات OmniPulse على هذا المتصفح. عند النشر على الإنترنت، رفع الفيديو لجميع المستخدمين يحتاج تخزينًا وخادمًا منفصلين.</p><label for="op-video-title">عنوان الفيديو</label><input id="op-video-title" maxlength="100" placeholder="مثال: لقطة من حلقة"><label for="op-video-kind">أين تريد نشر الفيديو؟</label><select id="op-video-kind" style="box-sizing:border-box;width:100%;border:1px solid #3a4950;border-radius:10px;background:#24232b;color:white;padding:10px;margin:6px 0 10px;font:inherit"><option value="shorts">شورتس (فيديو قصير)</option><option value="regular">الفيديوهات العادية</option><option value="both" selected>شورتس والفيديوهات العادية معًا</option></select><label for="op-video-file">اختر ملف فيديو (MP4 أو WebM)</label><input id="op-video-file" type="file" accept="video/mp4,video/webm,video/ogg"><button type="button" id="op-publish-video">نشر الفيديو</button><p id="op-video-status" class="op-muted"></p></div>
+</section>
+<div id="op-videos-feed" aria-label="الفيديوهات التي أضفتها"></div>
+<script>
+(function(){
+ const $=id=>document.getElementById(id); const panel=$('op-panel'), msgArea=$('op-msg-area'), vidArea=$('op-video-area'), accountArea=$('op-account-area'), loginArea=$('op-login-area');
+ const MSG_KEY='omnipulse_demo_messages_v1';
+ function showPanel(tab){panel.style.display='block';showTab(tab)} function showTab(tab){msgArea.hidden=tab!=='msg';vidArea.hidden=tab!=='video';accountArea.hidden=tab!=='account';loginArea.hidden=tab!=='login';$('op-tab-msg').style.opacity=tab==='msg'?'1':'.65';$('op-tab-video').style.opacity=tab==='video'?'1':'.65';$('op-tab-account').style.opacity=tab==='account'?'1':'.65';$('op-tab-login').style.opacity=tab==='login'?'1':'.65';if(tab==='msg')renderMessages();if(tab==='account')loadAccount();if(tab==='login')loadLogin()}
+ $('op-open-login').addEventListener('click',()=>showPanel('login')); $('op-tab-login').addEventListener('click',()=>showTab('login')); $('op-open-account').addEventListener('click',()=>showPanel('account')); $('op-tab-account').addEventListener('click',()=>showTab('account')); $('op-open-messages').addEventListener('click',()=>showPanel('msg')); $('op-open-video').addEventListener('click',()=>showPanel('video')); $('op-close').addEventListener('click',()=>panel.style.display='none');$('op-tab-msg').addEventListener('click',()=>showTab('msg'));$('op-tab-video').addEventListener('click',()=>showTab('video'));
+ function getMessages(){try{return JSON.parse(localStorage.getItem(MSG_KEY)||'[]')}catch(e){return []}}
+ function renderMessages(){const box=$('op-message-list');box.replaceChildren();const items=getMessages();if(!items.length){const p=document.createElement('p');p.className='op-muted';p.textContent='لا توجد رسائل بعد. اكتب أول رسالة أعلاه.';box.appendChild(p);return}items.slice(-30).reverse().forEach(m=>{const d=document.createElement('div');d.className='op-entry';const b=document.createElement('b');b.textContent=m.name+' · ';const time=document.createElement('small');time.className='op-muted';time.textContent=m.time;const p=document.createElement('div');p.textContent=m.text;d.append(b,time,p);box.appendChild(d)})}
+ $('op-send-message').addEventListener('click',()=>{const text=$('op-message').value.trim();const name=$('op-sender').value.trim()||'مستخدم OmniPulse';if(!text){$('op-message').focus();return}const list=getMessages();list.push({name,text,time:new Date().toLocaleString('ar')});try{localStorage.setItem(MSG_KEY,JSON.stringify(list.slice(-100)));$('op-message').value='';renderMessages()}catch(e){alert('تعذر حفظ الرسالة في المتصفح.')}});
+ const DB='omnipulse_local_videos', STORE='videos';let dbp;const OWNER_KEY='omnipulse_local_owner_v1';let ownerId=localStorage.getItem(OWNER_KEY);if(!ownerId){ownerId='owner-'+Date.now()+'-'+Math.random().toString(16).slice(2);try{localStorage.setItem(OWNER_KEY,ownerId)}catch(e){}}
+ const PROFILE_KEY='omnipulse_profile_name_v1';const LOGIN_KEY='omnipulse_demo_login_v1';function loadLogin(){let u={};try{u=JSON.parse(localStorage.getItem(LOGIN_KEY)||'{}')}catch(e){}$('op-login-name').value=u.name||localStorage.getItem(PROFILE_KEY)||'';$('op-login-email').value=u.email||'';$('op-login-status').textContent=u.name?'تم تسجيل الدخول محليًا باسم '+u.name+'.':'أدخل اسم مستخدم للمتابعة.';$('op-logout').hidden=!u.name;$('op-open-login').textContent=u.name?'👤 '+u.name:'🔐 تسجيل الدخول'}$('op-login-submit').addEventListener('click',()=>{const name=$('op-login-name').value.trim(),email=$('op-login-email').value.trim();if(!name){$('op-login-status').textContent='اكتب اسم المستخدم أولًا.';return}const u={name,email};try{localStorage.setItem(LOGIN_KEY,JSON.stringify(u));localStorage.setItem(PROFILE_KEY,name);$('op-login-status').textContent='تم تسجيل الدخول التجريبي باسم '+name+' على هذا المتصفح فقط.';$('op-logout').hidden=false;$('op-open-login').textContent='👤 '+name;$('op-account-name').value=name}catch(e){$('op-login-status').textContent='تعذر حفظ الجلسة في المتصفح.'}});$('op-logout').addEventListener('click',()=>{localStorage.removeItem(LOGIN_KEY);$('op-login-name').value='';$('op-login-email').value='';$('op-login-status').textContent='تم تسجيل الخروج من الجلسة التجريبية.';$('op-logout').hidden=true;$('op-open-login').textContent='🔐 تسجيل الدخول'});function loadAccount(){const input=$('op-account-name');if(input)input.value=localStorage.getItem(PROFILE_KEY)||'';} $('op-save-account').addEventListener('click',()=>{const name=$('op-account-name').value.trim();try{if(name)localStorage.setItem(PROFILE_KEY,name);else localStorage.removeItem(PROFILE_KEY);$('op-account-status').textContent=name?'تم حفظ اسم الحساب على هذا المتصفح.':'تم مسح اسم الحساب.'}catch(e){$('op-account-status').textContent='تعذر حفظ الاسم.'}});
+ function openDB(){if(!('indexedDB' in window))return Promise.reject(Error('IndexedDB غير متاح'));if(dbp)return dbp;dbp=new Promise((resolve,reject)=>{const req=indexedDB.open(DB,1);req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains(STORE))req.result.createObjectStore(STORE,{keyPath:'id'})};req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)});return dbp}
+ async function allVideos(){const db=await openDB();return new Promise((resolve,reject)=>{const r=db.transaction(STORE,'readonly').objectStore(STORE).getAll();r.onsuccess=()=>resolve(r.result||[]);r.onerror=()=>reject(r.error)})}
+ async function renderVideos(){const feed=$('op-videos-feed');feed.replaceChildren();let items=[];try{items=await allVideos()}catch(e){return}
+ const page=location.pathname.split('/').pop().toLowerCase();
+ // Shorts page shows short-form uploads; cinema page shows regular uploads; other pages show both.
+ if(page==='shorts.html') items=items.filter(v=>v.kind==='shorts'||v.kind==='both');
+ else if(page==='cinema-original.html') items=items.filter(v=>v.kind==='regular'||v.kind==='both');
+ items.sort((a,b)=>b.created-a.created).forEach(v=>{const card=document.createElement('article');card.className='op-entry';card.style.cssText='background:#191820;border:1px solid #34343d;padding:14px;border-radius:16px;color:#eee';const kind=document.createElement('span');kind.className='op-kind';kind.textContent=v.kind==='both'?'شورتس + فيديو عادي':v.kind==='shorts'?'شورتس':'فيديو عادي';const title=document.createElement('h3');title.textContent=v.title||'فيديو جديد';title.style.margin='0 0 10px';const video=document.createElement('video');video.controls=true;video.preload='metadata';video.playsInline=true;video.src=URL.createObjectURL(v.blob);const meta=document.createElement('p');meta.className='op-muted';meta.textContent='أُضيف من هذا الجهاز · '+new Date(v.created).toLocaleString('ar');const likesKey='omnipulse_video_likes_v1';let likes={};try{likes=JSON.parse(localStorage.getItem(likesKey)||'{}')}catch(e){}const liked=!!likes[v.id]?.liked;const count=Number(likes[v.id]?.count||0);const like=document.createElement('button');like.type='button';like.className='op-like-btn'+(liked?' liked':'');like.innerHTML=(liked?'♥':'♡')+' <span>'+(liked?'أعجبني':'أعجبني')+'</span> · <b>'+count+'</b>';like.setAttribute('aria-label','إعجاب بالفيديو');like.addEventListener('click',()=>{let state={};try{state=JSON.parse(localStorage.getItem(likesKey)||'{}')}catch(e){}const current=state[v.id]||{count:0,liked:false};current.liked=!current.liked;current.count=Math.max(0,Number(current.count||0)+(current.liked?1:-1));state[v.id]=current;try{localStorage.setItem(likesKey,JSON.stringify(state))}catch(e){}like.classList.toggle('liked',current.liked);like.innerHTML=(current.liked?'♥':'♡')+' <span>أعجبني</span> · <b>'+current.count+'</b>';});const actions=document.createElement('div');actions.className='op-overflow-wrap';const dots=document.createElement('button');dots.type='button';dots.className='op-menu-btn';dots.textContent='⋯';dots.setAttribute('aria-label','خيارات الفيديو');const menu=document.createElement('div');menu.className='op-overflow-menu';dots.addEventListener('click',()=>menu.classList.toggle('open'));if(v.ownerId===ownerId){const del=document.createElement('button');del.type='button';del.className='danger';del.textContent='🗑 حذف الفيديو';del.addEventListener('click',async()=>{if(!confirm('هل تريد حذف هذا الفيديو نهائيًا من هذا المتصفح؟'))return;try{const db=await openDB();await new Promise((resolve,reject)=>{const tx=db.transaction(STORE,'readwrite');tx.objectStore(STORE).delete(v.id);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error)});let state={};try{state=JSON.parse(localStorage.getItem(likesKey)||'{}')}catch(e){}delete state[v.id];try{localStorage.setItem(likesKey,JSON.stringify(state))}catch(e){}video.pause();URL.revokeObjectURL(video.src);await renderVideos()}catch(e){alert('تعذر حذف الفيديو. حاول مرة أخرى.')}});menu.appendChild(del);}else{const report=document.createElement('button');report.type='button';report.textContent='خيارات الحساب';report.addEventListener('click',()=>showPanel('account'));menu.appendChild(report)}actions.append(dots,menu);card.append(actions,kind,title,video,like,meta);feed.appendChild(card)})}
+ $('op-publish-video').addEventListener('click',async()=>{const file=$('op-video-file').files[0];const status=$('op-video-status');if(!file){status.textContent='اختر ملف فيديو أولًا.';return}if(!file.type.startsWith('video/')){status.textContent='الملف المختار ليس فيديو.';return}if(file.size>150*1024*1024){status.textContent='حجم الفيديو أكبر من 150 ميغابايت في هذه النسخة التجريبية.';return}status.textContent='جارٍ حفظ الفيديو...';try{const db=await openDB();await new Promise((resolve,reject)=>{const tx=db.transaction(STORE,'readwrite');tx.objectStore(STORE).put({id:Date.now()+'-'+Math.random().toString(16).slice(2),title:$('op-video-title').value.trim()||file.name,blob:file,created:Date.now(),type:file.type,kind:$('op-video-kind').value,ownerId});tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error)});$('op-video-file').value='';$('op-video-title').value='';status.textContent='تم نشر الفيديو في القسم الذي اخترته (على هذا المتصفح فقط).';await renderVideos()}catch(e){status.textContent='تعذر حفظ الفيديو. جرّب تشغيل الموقع عبر استضافة أو خادم محلي.'}});
+ renderMessages();renderVideos();
+ if(document.body.classList.contains('op-shorts-page')){document.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA','SELECT'].includes(document.activeElement&&document.activeElement.tagName))return;const feed=$('op-videos-feed');if(!feed||!feed.children.length)return;if(e.key==='ArrowDown'||e.key==='PageDown'){e.preventDefault();feed.scrollBy({top:feed.clientHeight,behavior:'smooth'})}else if(e.key==='ArrowUp'||e.key==='PageUp'){e.preventDefault();feed.scrollBy({top:-feed.clientHeight,behavior:'smooth'})}})}
+})();
+</script>
+
+<style id="omni-auth-style">
+#omni-auth-gate{position:fixed;inset:0;z-index:2147483000;display:flex;align-items:center;justify-content:center;padding:18px;background:radial-gradient(ellipse at top,#16333a 0,#101016 55%,#09090d 100%);color:#f5f7fa;font-family:Cairo,Arial,sans-serif;direction:rtl}
+#omni-auth-gate[hidden]{display:none!important}#omni-auth-card{width:min(100%,430px);padding:26px;border:1px solid #35464d;border-radius:24px;background:#191a22;box-shadow:0 20px 80px #0009}#omni-auth-card h2{font-size:26px;margin:0 0 6px}#omni-auth-card p{color:#aebcc4;font-size:13px;line-height:1.8}#omni-auth-card label,#omni-profile-modal label{display:block;margin:12px 0 5px;font-size:13px;color:#d8e3e8}#omni-auth-card input,#omni-profile-modal input{width:100%;box-sizing:border-box;padding:12px;border:1px solid #3a4950;border-radius:11px;background:#101117;color:white;font:inherit;outline:none}#omni-auth-card input:focus,#omni-profile-modal input:focus{border-color:#00dce6}#omni-auth-card button,#omni-profile-modal button{border:0;border-radius:11px;padding:11px 14px;font:inherit;font-weight:700;cursor:pointer}#omni-auth-submit{width:100%;margin-top:16px;background:#00dce6;color:#052326}#omni-auth-switch{background:#30323c;color:#e9f2f4;width:100%;margin-top:8px}#omni-auth-status{min-height:24px;color:#ffb2b8!important}#omni-profile-launch{position:fixed;z-index:99999;left:14px;top:14px;border:1px solid #3a4950;border-radius:999px;background:#171820;color:#fff;padding:7px 12px;display:flex;gap:8px;align-items:center;font:600 13px Cairo,Arial,sans-serif;cursor:pointer;box-shadow:0 5px 20px #0005}#omni-profile-launch img{width:28px;height:28px;border-radius:50%;object-fit:cover;background:#343640}#omni-profile-modal{position:fixed;inset:0;z-index:2147482000;background:#000b;display:none;align-items:center;justify-content:center;padding:16px;direction:rtl;font-family:Cairo,Arial,sans-serif;color:#f5f7fa}#omni-profile-modal.open{display:flex}#omni-profile-card{width:min(100%,430px);background:#191a22;border:1px solid #35464d;border-radius:22px;padding:24px;box-shadow:0 20px 80px #0009}#omni-profile-preview{width:100px;height:100px;border-radius:50%;object-fit:cover;display:block;margin:10px auto;border:3px solid #00dce6;background:#30323c}#omni-profile-card .omni-profile-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}#omni-profile-card .omni-profile-actions button:first-child{background:#00dce6;color:#052326}#omni-profile-card .omni-profile-actions button:last-child{background:#30323c;color:#fff}#omni-profile-note{font-size:12px;color:#aebcc4;line-height:1.7}
+</style>
+<div id="omni-auth-gate" role="dialog" aria-modal="true" aria-labelledby="omni-auth-title">
+ <div id="omni-auth-card"><div style="font-size:35px;margin-bottom:6px">◎</div><h2 id="omni-auth-title">مرحبًا بك في OmniPulse</h2><p id="omni-auth-intro">أنشئ حسابًا بكلمة مرور أو سجّل الدخول للمتابعة. لا يمكن فتح المنصة قبل تسجيل الدخول.</p>
+ <form id="omni-auth-form"><label for="omni-auth-username">اسم الحساب</label><input id="omni-auth-username" name="username" autocomplete="username" maxlength="40" required placeholder="اسم المستخدم"><label for="omni-auth-password">كلمة المرور</label><input id="omni-auth-password" name="password" type="password" autocomplete="current-password" minlength="8" required placeholder="8 أحرف على الأقل"><div id="omni-auth-confirm-wrap"><label for="omni-auth-confirm">تأكيد كلمة المرور</label><input id="omni-auth-confirm" type="password" autocomplete="new-password" minlength="8" placeholder="أعد كتابة كلمة المرور"></div><button id="omni-auth-submit" type="submit">إنشاء الحساب</button></form><button id="omni-auth-switch" type="button">لدي حساب بالفعل — تسجيل الدخول</button><p id="omni-auth-status" role="status"></p><p>نسخة تجريبية: الحساب يُحفظ في هذا المتصفح فقط. لحماية حقيقية ومزامنة الحسابات بين الأجهزة، يجب ربط خدمة مصادقة سحابية.</p></div></div>
+<button id="omni-profile-launch" type="button" hidden><img id="omni-profile-launch-img" alt="صورة الحساب"><span id="omni-profile-launch-name">حسابي</span></button>
+<div id="omni-profile-modal" role="dialog" aria-modal="true" aria-labelledby="omni-profile-title"><div id="omni-profile-card"><h2 id="omni-profile-title" style="margin:0;text-align:center">إعدادات الحساب</h2><img id="omni-profile-preview" alt="معاينة صورة الحساب"><label for="omni-profile-image">صورة الحساب</label><input id="omni-profile-image" type="file" accept="image/png,image/jpeg,image/webp,image/gif"><label for="omni-profile-name">اسم الحساب</label><input id="omni-profile-name" maxlength="40" placeholder="اسم المستخدم"><p id="omni-profile-note">اختر صورة من جهازك. تُحفظ الصورة والاسم على هذا المتصفح فقط.</p><div class="omni-profile-actions"><button type="button" id="omni-profile-save">حفظ التغييرات</button><button type="button" id="omni-profile-logout">تسجيل الخروج</button><button type="button" id="omni-profile-close">إغلاق</button></div><p id="omni-profile-status" role="status"></p></div></div>
+<script id="omni-auth-script">
+(()=>{'use strict';
+ const $=id=>document.getElementById(id); const ACCOUNT_KEY='omnipulse_auth_account_v2', SESSION_KEY='omnipulse_auth_session_v2', PROFILE_KEY='omnipulse_auth_profile_v2';
+ const gate=$('omni-auth-gate'), form=$('omni-auth-form'), intro=$('omni-auth-intro'), confirmWrap=$('omni-auth-confirm-wrap'), submit=$('omni-auth-submit'), status=$('omni-auth-status'), switchBtn=$('omni-auth-switch');let mode='register';
+ const defaultAvatar='data:image/svg+xml;charset=UTF-8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="50" fill="#30323c"/><circle cx="50" cy="37" r="18" fill="#00dce6"/><path d="M16 94c2-23 16-34 34-34s32 11 34 34" fill="#00dce6"/></svg>');
+ function read(k,fallback=null){try{return JSON.parse(localStorage.getItem(k)||'null')??fallback}catch(e){return fallback}}
+ function write(k,v){localStorage.setItem(k,JSON.stringify(v))}
+ function bytesToHex(b){return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('')}
+ async function hashPassword(password,salt){if(!crypto?.subtle)throw Error('المتصفح لا يدعم حماية كلمة المرور هنا. افتح الموقع عبر HTTPS أو Firebase Hosting.');const enc=new TextEncoder();const key=await crypto.subtle.importKey('raw',enc.encode(password),'PBKDF2',false,['deriveBits']);const bits=await crypto.subtle.deriveBits({name:'PBKDF2',salt:enc.encode(salt),iterations:150000,hash:'SHA-256'},key,256);return bytesToHex(bits)}
+ function showMode(next){mode=next;const registering=mode==='register';$('omni-auth-title').textContent=registering?'إنشاء حساب OmniPulse':'تسجيل الدخول إلى OmniPulse';intro.textContent=registering?'أنشئ حسابًا بكلمة مرور للبدء باستخدام المنصة.':'أدخل اسم الحساب وكلمة المرور اللذين أنشأتهما على هذا المتصفح.';confirmWrap.hidden=!registering;submit.textContent=registering?'إنشاء الحساب':'تسجيل الدخول';$('omni-auth-password').autocomplete=registering?'new-password':'current-password';switchBtn.textContent=registering?'لدي حساب بالفعل — تسجيل الدخول':'ليس لدي حساب — إنشاء حساب';status.textContent=''}
+ function getProfile(){return read(PROFILE_KEY,{name:(read(ACCOUNT_KEY,{})||{}).username||'',avatar:defaultAvatar})}
+ function applyProfile(){const p=getProfile();$('omni-profile-launch-name').textContent=p.name||'حسابي';$('omni-profile-launch-img').src=p.avatar||defaultAvatar;$('omni-profile-preview').src=p.avatar||defaultAvatar;const old=$('op-account-name');if(old&&p.name)old.value=p.name;}
+ function authenticated(){return !!read(SESSION_KEY,null)}
+ function unlock(){gate.hidden=true;$('omni-profile-launch').hidden=false;applyProfile();document.body.style.overflow='';}
+ function lock(){gate.hidden=false;$('omni-profile-launch').hidden=true;document.body.style.overflow='hidden';showMode(read(ACCOUNT_KEY,null)?'login':'register');}
+ form.addEventListener('submit',async e=>{e.preventDefault();const username=$('omni-auth-username').value.trim(),password=$('omni-auth-password').value,confirm=$('omni-auth-confirm').value;if(username.length<2){status.textContent='اسم الحساب يجب أن يتكون من حرفين على الأقل.';return}if(password.length<8){status.textContent='استخدم كلمة مرور من 8 أحرف على الأقل.';return}submit.disabled=true;status.textContent='جارٍ التحقق...';try{let account=read(ACCOUNT_KEY,null);if(mode==='register'){if(account){status.textContent='يوجد حساب على هذا المتصفح. سجّل الدخول بدلًا من إنشاء حساب جديد.';showMode('login');$('omni-auth-username').value=username;return}if(password!==confirm){status.textContent='كلمتا المرور غير متطابقتين.';return}const salt=crypto.getRandomValues(new Uint8Array(16));const saltHex=bytesToHex(salt);account={username,salt:saltHex,passwordHash:await hashPassword(password,saltHex),createdAt:Date.now()};write(ACCOUNT_KEY,account);write(PROFILE_KEY,{name:username,avatar:defaultAvatar})}else{if(!account){status.textContent='لا يوجد حساب بعد. أنشئ حسابًا أولًا.';showMode('register');return}if(username.toLowerCase()!==String(account.username).toLowerCase()){status.textContent='اسم الحساب غير صحيح.';return}const candidate=await hashPassword(password,account.salt);if(candidate!==account.passwordHash){status.textContent='كلمة المرور غير صحيحة.';return}}
+ write(SESSION_KEY,{username:account.username,startedAt:Date.now()});$('omni-auth-password').value='';$('omni-auth-confirm').value='';unlock();
+ }catch(err){status.textContent=err.message||'تعذّر إكمال العملية. جرّب تشغيل الموقع عبر HTTPS.'}finally{submit.disabled=false}});
+ switchBtn.addEventListener('click',()=>showMode(mode==='register'?'login':'register'));
+ $('omni-profile-launch').addEventListener('click',()=>{const p=getProfile();$('omni-profile-name').value=p.name||'';$('omni-profile-image').value='';$('omni-profile-status').textContent='';$('omni-profile-modal').classList.add('open')});$('omni-profile-close').addEventListener('click',()=>$('omni-profile-modal').classList.remove('open'));
+ $('omni-profile-image').addEventListener('change',e=>{const file=e.target.files&&e.target.files[0];if(!file)return;if(!file.type.startsWith('image/')){$('omni-profile-status').textContent='اختر ملف صورة صالحًا.';return}if(file.size>3*1024*1024){$('omni-profile-status').textContent='اختر صورة أصغر من 3 ميغابايت.';e.target.value='';return}const reader=new FileReader();reader.onload=()=>{$('omni-profile-preview').src=reader.result;$('omni-profile-preview').dataset.pending=reader.result};reader.onerror=()=>$('omni-profile-status').textContent='تعذرت قراءة الصورة.';reader.readAsDataURL(file)});
+ $('omni-profile-save').addEventListener('click',()=>{const name=$('omni-profile-name').value.trim();if(name.length<2){$('omni-profile-status').textContent='اكتب اسمًا يتكون من حرفين على الأقل.';return}const p=getProfile();p.name=name;p.avatar=$('omni-profile-preview').dataset.pending||p.avatar||defaultAvatar;try{write(PROFILE_KEY,p);const a=read(ACCOUNT_KEY,{});a.username=name;write(ACCOUNT_KEY,a);const s=read(SESSION_KEY,{});s.username=name;write(SESSION_KEY,s);$('omni-profile-preview').dataset.pending='';applyProfile();$('omni-profile-status').textContent='تم حفظ الاسم وصورة الحساب على هذا المتصفح.';const old=$('op-account-name');if(old)old.value=name;const oldStatus=$('op-account-status');if(oldStatus)oldStatus.textContent='تم حفظ اسم الحساب.'}catch(e){$('omni-profile-status').textContent='تعذر الحفظ؛ قد تكون مساحة المتصفح ممتلئة.'}});
+ $('omni-profile-logout').addEventListener('click',()=>{localStorage.removeItem(SESSION_KEY);$('omni-profile-modal').classList.remove('open');lock()});
+ // Do not allow closing or bypassing the sign-in gate before authentication.
+ if(authenticated())unlock();else lock();window.addEventListener('storage',e=>{if(e.key===SESSION_KEY){if(authenticated())unlock();else lock()}});
+})();
+</script>
+</body></html>

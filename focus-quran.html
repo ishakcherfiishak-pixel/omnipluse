@@ -1,0 +1,581 @@
+<!DOCTYPE html><html class="dark" dir="rtl" lang="ar" style=""><head><title>OmniPulse — النبض الرقمي الموحد</title><meta name="description" content="OmniPulse منصة عربية موحدة للشورتس والفيديوهات والقصص والرسائل والمحتوى اليومي."><meta name="theme-color" content="#141219"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml"><meta name="color-scheme" content="dark"><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Noto+Sans+Arabic:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;font-family:'Noto Sans Arabic',sans-serif;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary-container":"#755d00","on-tertiary-fixed":"#241a00","surface-container-high":"#2b2930","secondary-container":"#ff506e","primary-fixed-dim":"#00dce6","surface-tint":"#00dce6","error-container":"#93000a","tertiary-fixed":"#ffe08b","outline-variant":"#3a494b","on-primary-fixed":"#002022","inverse-surface":"#e6e0ea","on-secondary-container":"#5b0018","on-secondary-fixed":"#40000f","on-tertiary-fixed-variant":"#584400","surface-container-lowest":"#0f0d14","on-error-container":"#ffdad6","secondary-fixed-dim":"#ffb2b8","primary-fixed":"#6ff6ff","secondary":"#ffb2b8","on-primary-fixed-variant":"#004f53","surface-container-low":"#1c1b21","error":"#ffb4ab","surface-container-highest":"#36343b","surface-container":"#201f26","on-primary":"#00373a","on-secondary":"#67001d","inverse-on-surface":"#312f37","outline":"#849495","on-background":"#e6e0ea","tertiary":"#fff6e9","surface-variant":"#36343b","on-secondary-fixed-variant":"#91002d","tertiary-fixed-dim":"#f1c100","on-surface":"#e6e0ea","secondary-fixed":"#ffdadb","on-primary-container":"#006a70","primary-container":"#00f2fe","surface":"#141219","primary":"#e0fdff","surface-dim":"#141219","inverse-primary":"#00696f","on-error":"#690005","on-surface-variant":"#b9cacb","background":"#141219","tertiary-container":"#ffd761","on-tertiary":"#3d2f00","surface-bright":"#3a3840"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"margin":"1rem","space-lg":"1.5rem","space-xs":"0.25rem","space-md":"1rem","margin-tablet":"1.5rem","space-sm":"0.5rem","gutter-desktop":"1.5rem","margin-desktop":"2rem","gutter":"1rem","space-xl":"2.5rem"},"fontFamily":{"body-md":["Inter"],"body-lg":["Inter"],"title-md":["Space Grotesk"],"body-sm":["Inter"],"label-sm":["Space Grotesk"],"label-md":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"headline-sm":["Space Grotesk"],"label-lg":["Space Grotesk"],"display-xl":["Space Grotesk"],"headline-lg":["Space Grotesk"],"display-xl-mobile":["Space Grotesk"],"headline-md":["Space Grotesk"]},"fontSize":{"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"title-md":["18px",{"lineHeight":"24px","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.03em","fontWeight":"500"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"600"}],"display-xl":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"display-xl-mobile":["38px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface min-h-screen antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_16px_rgba(0,0,0,0.35)]"><div class="h-16 w-full px-margin-desktop flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md shrink-0"><img alt="OmniPulse Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wg7Vpg7kwpYp-S8rcvGjLAOOETrYACXitioh1XJULn6GnAHAHTkmPfoB6G_4-LFZ9JV4Y4WF5zhWf8i5kBDG6N04Vw1hCRlw0fG6W5nnxI4-5COlULut3QRQOwJ9TduSVg8KTm7VrwYxH9oNSuIvZf0-Ow3o1JtapuXAt6ZW1LL2IWWq51YIbdIXbElUTkqDrwZPVCBPh0w3KxPxBVpIjuf-0zPvuMwP_ZBOwuGqBz8CwHw7EevUXw7id-"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none tracking-tight">OmniPulse</span><span class="font-label-sm text-label-sm text-on-surface-variant font-bold leading-none mt-space-xs">أومني بالس</span></div><div class="hidden xl:flex items-center gap-space-xs mr-space-md bg-surface-container-high/80 px-space-sm py-1 rounded-full"><span class="material-symbols-outlined text-[16px] text-secondary-container">local_fire_department</span><span class="font-label-sm text-label-sm text-secondary">شائع الآن: #مونتاج_رقمي</span></div></div><div class="flex-1 max-w-2xl mx-auto"><div class="relative flex items-center w-full bg-surface-container-low rounded-full px-space-md py-space-xs transition-all"><span class="material-symbols-outlined text-outline ml-space-sm text-[20px]">search</span><input class="w-full bg-transparent text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none" placeholder="ابحث عن منشورات، شورتس، قنوات، أو مستخدمين..." type="text"><span class="hidden md:inline-flex font-label-sm text-label-sm text-outline-variant bg-surface-container-highest px-space-xs rounded">⌘K</span></div></div><div class="flex items-center gap-space-md shrink-0"><button class="relative flex items-center justify-center w-10 h-10 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">send</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary-container"></span></button><button class="relative flex items-center justify-center w-10 h-10 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary-container"></span></button><div class="flex items-center gap-space-sm pr-space-xs"><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCib27VBcVAwa5U6HzWMMIoXPnCrQOAU7VM_LNdfOXFXbHYp-5nFi3eZz6gZ70fkxVtpsP-ldXNkS3LZh-3tueh90TbqFnZFdQzZHF-6J-z1LZ5pHpfBxAHnUAw71QGtAnxd0rL5Eg_ooL_uHnb-h4PbrMFp1uuGUeRjYSvX3TQPPPkqPCTdpfNuuvxSUazRY8YMH9EOSV2rDuDg0zeRYHXIyoUSh3SD_JwbF4xnYMPs6OkDu5jOnwi4Q"><span class="absolute -bottom-1 -left-1 flex items-center justify-center bg-tertiary-container text-on-tertiary font-label-sm text-[9px] px-1 rounded-full font-bold leading-none">🔥28</span></div></div></div></div></header><aside class="fixed right-0 top-0 h-full w-72 bg-surface-container-lowest/90 backdrop-blur-2xl z-50 flex flex-col pt-20 pb-margin-desktop justify-between shadow-[0_4px_24px_rgba(0,0,0,0.5)]"><div class="px-space-md flex flex-col gap-space-lg"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold shadow-[0_0_20px_rgba(0,242,254,0.3)]"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="universal-feed" href="index.html"><span class="material-symbols-outlined text-[22px]">dynamic_feed</span><span class="font-label-lg text-label-lg">الرئيسية الموحدة</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="shorts-and-cinema" href="shorts.html"><span class="material-symbols-outlined text-[22px]">smart_display</span><span class="font-label-lg text-label-lg">شورتس وسينما</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="snaps-and-direct" href="stories.html"><span class="material-symbols-outlined text-[22px]">forum</span><span class="font-label-lg text-label-lg">القصص والرسائل</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded-DEFAULT transition-all bg-primary-container text-on-primary-container font-bold shadow-[0_0_20px_rgba(0,242,254,0.3)]" data-path="settings-and-wellbeing" href="settings.html"><span class="material-symbols-outlined text-[22px]">hourglass_top</span><span class="font-label-lg text-label-lg">الإعدادات والتحكم</span></a></nav></div><div class="px-space-md flex flex-col gap-space-md"><div class="p-space-md rounded-DEFAULT bg-surface-container-low/70 flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-outline">وقت الشورتس اليومي</span><span class="font-label-sm text-label-sm text-primary-fixed">35 / 45 د</span></div><div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary-container rounded-full" style="width: 78%;"></div></div></div><button class="w-full flex items-center justify-center gap-space-sm py-space-md px-space-lg rounded-full bg-primary-container text-on-primary-container font-headline-sm text-label-lg font-bold shadow-[0_0_24px_rgba(0,242,254,0.35)] hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-all"><span class="material-symbols-outlined text-[20px]">add_circle</span><span class="">+ نشر موحد</span></button></div></aside><div class="pr-72"><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-gutter-desktop py-space-xl max-w-7xl mx-auto w-full flex flex-col gap-space-xl">
+<!-- Top Heroic Feature Card: Shorts Daily Limit & Focus Master Suite -->
+<section class="relative overflow-hidden rounded-xl bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-lowest p-space-xl shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
+<!-- Ambient Glow Refractions -->
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary-container/15 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-secondary-container/15 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="inline-flex items-center gap-space-xs bg-surface-container-highest/60 backdrop-blur-md px-space-md py-1 rounded-full w-fit">
+<span class="material-symbols-outlined text-primary-container text-[18px]" style="font-variation-settings: 'FILL' 1;">timer</span>
+<span class="font-label-sm text-label-sm text-primary tracking-wider uppercase">محرك الحماية الرقمية المتقدم</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">التحكم في وقت الشورتس والرفاهية الرقمية</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            تحكّم بدقة في تدفق التمرير اللانهائي (Infinite Scroll). اضبط سقف المشاهدة اليومي المخصص، فعّل بروتوكولات القفل التلقائي، واحمِ تركيزك وطاقتك الذهنية عبر تقنيات التنفس الواعية.
+          </p>
+</div>
+<!-- Quick Summary Status Pill -->
+<div class="flex items-center gap-space-md bg-surface-container-lowest/80 backdrop-blur-xl p-space-md rounded-lg shadow-xl">
+<div class="relative w-16 h-16 flex items-center justify-center">
+<svg class="w-16 h-16 -rotate-90 transform" viewBox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary-container transition-all duration-700 ease-out" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="78, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-title-md text-title-md text-primary font-bold">78%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">المستهلك اليوم</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface" id="current-consumed-display">35</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ <span id="current-limit-tag" class="">45</span> دقيقة</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">warning</span> متبقي 10 دقائق فقط
+            </span>
+</div>
+</div>
+</div>
+<!-- Interactive Quota Configuration Core -->
+<div class="mt-space-xl grid grid-cols-1 lg:grid-cols-12 gap-space-lg pt-space-lg">
+<!-- Left Sub-panel: Granular Limit Selector -->
+<div class="lg:col-span-7 flex flex-col gap-space-md bg-surface-container-low/70 backdrop-blur-xl p-space-lg rounded-lg shadow-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-[22px]">tune</span>
+<span class="font-title-md text-title-md text-on-surface">تعيين الحد الزمني اليومي للشورتس</span>
+</div>
+<span class="font-label-md text-label-md bg-primary-container/15 text-primary-fixed px-space-sm py-1 rounded-full">قابل للتخصيص لحظياً</span>
+</div>
+<!-- Quick Select Preset Badges -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm mt-space-xs">
+<button class="preset-btn py-space-sm px-space-md rounded-DEFAULT bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-container-highest transition-all text-center flex flex-col items-center justify-center" onclick="setQuickLimit(15)" type="button">
+<span class="">15 دقيقة</span>
+<span class="font-label-sm text-label-sm text-outline">تركيز فائق</span>
+</button>
+<button class="preset-btn py-space-sm px-space-md rounded-DEFAULT bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-container-highest transition-all text-center flex flex-col items-center justify-center" onclick="setQuickLimit(30)" type="button">
+<span class="">30 دقيقة</span>
+<span class="font-label-sm text-label-sm text-outline">متوازن</span>
+</button>
+<button class="preset-btn active-preset py-space-sm px-space-md rounded-DEFAULT bg-primary-container text-on-primary-container font-label-lg text-label-lg shadow-[0_0_15px_rgba(0,242,254,0.3)] transition-all text-center flex flex-col items-center justify-center" onclick="setQuickLimit(45)" type="button">
+<span class="">45 دقيقة</span>
+<span class="font-label-sm text-label-sm opacity-80">الموصى به</span>
+</button>
+<button class="preset-btn py-space-sm px-space-md rounded-DEFAULT bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-container-highest transition-all text-center flex flex-col items-center justify-center" onclick="setQuickLimit(60)" type="button">
+<span class="">60 دقيقة</span>
+<span class="font-label-sm text-label-sm text-outline">حرّ ومضبوط</span>
+</button>
+</div>
+<!-- Custom Numeric Dial & Slider -->
+<div class="flex flex-col gap-space-sm mt-space-sm bg-surface-container/60 p-space-md rounded-DEFAULT">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface-variant">الحد بالدقائق بالتحديد:</span>
+<div class="flex items-center gap-space-xs bg-surface-container-highest px-space-sm py-1 rounded-DEFAULT">
+<button class="w-7 h-7 flex items-center justify-center rounded-full bg-surface-container-high hover:bg-surface-container text-on-surface transition-colors" onclick="adjustMinutes(-5)" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<input class="w-12 text-center bg-transparent font-title-md text-title-md text-primary font-bold focus:outline-none" id="minute-counter-input" max="180" min="5" onchange="syncSliderFromInput(this.value)" type="number" value="45">
+<span class="font-label-sm text-label-sm text-outline pl-1">د</span>
+<button class="w-7 h-7 flex items-center justify-center rounded-full bg-surface-container-high hover:bg-surface-container text-on-surface transition-colors" onclick="adjustMinutes(5)" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+<!-- Precision Range Slider -->
+<div class="relative w-full flex items-center py-2">
+<input class="w-full h-2 bg-surface-container-highest rounded-full appearance-none cursor-pointer accent-primary-container" id="limit-slider" max="180" min="5" oninput="syncInputFromSlider(this.value)" step="5" type="range" value="45">
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-outline">
+<span class="">5 دقائق (تقشف رقمي)</span>
+<span class="">90 دقيقة</span>
+<span class="">180 دقيقة (الحد الأقصى)</span>
+</div>
+</div>
+<!-- Strict Safeguards Toggles within Shorts Core -->
+<div class="flex flex-col gap-space-sm mt-space-xs">
+<!-- Hard Lock Toggle Card -->
+<div class="flex items-center justify-between p-space-md rounded-DEFAULT bg-surface-container/40 hover:bg-surface-container/70 transition-all">
+<div class="flex items-start gap-space-md max-w-lg">
+<div class="p-2 rounded-full bg-secondary-container/20 text-secondary-container shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface flex items-center gap-2">
+                    تفعيل القفل الذكي الصارم (Hard Lock)
+                    <span class="bg-secondary-container/20 text-secondary-fixed text-[10px] font-bold px-2 py-0.5 rounded-full">إلزامي للتركيز</span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                    عند استهلاك الـ 45 دقيقة كاملة، يُغلق موجز الشورتس بالكامل ويُطلب رمز PIN مكون من 4 أرقام لفتحه لمنع التمرير الاندفاعي اللاواعي.
+                  </span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0 mr-space-md">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-surface peer-checked:after:bg-on-primary peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-outline after:border-surface after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+<!-- Mindful Pause -->
+<div class="flex items-center justify-between p-space-md rounded-DEFAULT bg-surface-container/40 hover:bg-surface-container/70 transition-all">
+<div class="flex items-start gap-space-md max-w-lg">
+<div class="p-2 rounded-full bg-tertiary-container/20 text-tertiary-fixed-dim shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">self_improvement</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">تذكير الاستراحة اللطيف (Mindful Pause)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                    ظهور شاشة استراحة شفافة كل 10 دقائق من التمرير المتصل، تقترح تمارين تنفس لمدة 20 ثانية قبل الاستمرار.
+                  </span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0 mr-space-md">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-surface peer-checked:after:bg-on-primary peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-outline after:border-surface after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+<!-- Night Mode Guard -->
+<div class="flex items-center justify-between p-space-md rounded-DEFAULT bg-surface-container/40 hover:bg-surface-container/70 transition-all">
+<div class="flex items-start gap-space-md max-w-lg">
+<div class="p-2 rounded-full bg-primary-container/20 text-primary-container shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">bedtime</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">حظر التمرير التلقائي بعد منتصف الليل</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                    إيقاف تشغيل الفيديو التالي تلقائياً بين الساعة 12:00 صباحاً و 06:00 صباحاً لحماية إيقاع النوم الحيوي.
+                  </span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0 mr-space-md">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-surface peer-checked:after:bg-on-primary peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-outline after:border-surface after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Right Sub-panel: Weekly Consumption Data Visualization -->
+<div class="lg:col-span-5 flex flex-col justify-between bg-surface-container-low/70 backdrop-blur-xl p-space-lg rounded-lg shadow-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">معدل الاستهلاك الأسبوعي</span>
+<span class="font-label-sm text-label-sm text-outline">آخر 7 أيام</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">مقارنة ساعات استهلاك الشورتس بين يوتيوب وتيك توك</p>
+</div>
+<!-- SVG Bar Comparison Chart -->
+<div class="py-space-md flex flex-col gap-space-md">
+<div class="p-space-xs bg-surface-container-high/60 rounded flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary-container text-[18px]">delete_forever</span><div class="flex flex-col"><span class="font-label-sm text-on-surface font-bold">تم حذف مقطع غير قانوني وحظر الحساب @spammer_reel</span><span class="font-label-sm text-[10px] text-secondary">سبب: ألفاظ نابية ومحتوى سفاهات • ساري المفعول حتى 7 أيام</span></div></div><span class="font-label-sm text-[10px] text-secondary bg-secondary-container/20 px-2 py-0.5 rounded font-bold shrink-0">محظور 7 أيام</span></div>
+<!-- Legend & Stats -->
+<div class="flex items-center justify-between pt-space-sm bg-surface-container-high/40 p-space-sm rounded-DEFAULT">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface">YouTube Shorts</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface">TikTok Feeds</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary-fixed font-bold">المجموع: 4.2 س / أسبوع</span>
+</div>
+</div>
+<!-- Mindful Insight Box -->
+<div class="p-space-sm rounded-DEFAULT bg-surface-container-highest/50 flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">insights</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+              وفرت هذا الأسبوع <strong class="text-tertiary">115 دقيقة</strong> بفضل القفل الصارم للشورتس مقارنة بالأسبوع الماضي!
+            </span>
+</div>
+</div>
+</div>
+</section><section class="relative overflow-hidden rounded-xl bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-lowest p-space-lg md:p-space-xl border border-primary-container/30 shadow-[0_20px_50px_rgba(0,0,0,0.6)] flex flex-col gap-space-lg"><div class="absolute -top-24 -right-24 w-80 h-80 bg-primary-container/15 rounded-full blur-3xl pointer-events-none"></div><div class="absolute -bottom-24 -left-24 w-80 h-80 bg-tertiary-container/10 rounded-full blur-3xl pointer-events-none"></div><div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md border-b border-surface-container-highest/60 pb-space-md"><div class="flex items-center gap-space-md"><div class="relative w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary-container shrink-0 shadow-[0_0_15px_rgba(0,242,254,0.3)]"><span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">menu_book</span><span class="absolute -top-1 -right-1 w-3 h-3 bg-primary-container rounded-full animate-ping"></span></div><div class="flex flex-col"><div class="flex items-center gap-space-sm flex-wrap"><h2 class="font-headline-sm text-headline-sm text-primary">الورد القرآني اليومي ولافتة القرآن الكريم (Quran Daily Protocol)</h2><span class="bg-primary-container/15 text-primary-fixed text-label-sm font-bold px-2 py-0.5 rounded-full flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span> فرض إيماني وسكينة</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">بروتوكول حماية روحية صارم: ورد تلاوة يومي إلزامي لا يقل عن 15 دقيقة مع التثبيت الليلي الإجباري للمصحف بعد منتصف الليل لحظر التشتت والملهيات.</p></div></div><div class="flex items-center gap-space-sm shrink-0"><span class="font-label-sm text-label-sm text-outline">حالة الورد اليومي:</span><div class="flex items-center gap-2 bg-surface-container-lowest/80 px-space-md py-1.5 rounded-full border border-primary-container/25"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-primary font-bold">10 / 15 دقيقة (متبقي 5 د)</span></div></div></div><div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-lg"><div class="lg:col-span-8 flex flex-col gap-space-md"><div class="p-space-md rounded-DEFAULT bg-surface-container-low/80 border border-secondary-container/30 flex flex-col md:flex-row items-start justify-between gap-space-md shadow-md"><div class="flex items-start gap-space-sm"><div class="p-2 rounded-full bg-secondary-container/20 text-secondary-container shrink-0 mt-0.5"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">lock_clock</span></div><div class="flex flex-col gap-1"><div class="flex items-center gap-2 flex-wrap"><span class="font-label-lg text-label-lg text-secondary font-bold">قاعدة الالتزام القرآني الصارم</span><span class="bg-secondary-container/20 text-secondary-fixed text-[10px] font-bold px-2 py-0.5 rounded-full border border-secondary-container/30">عقوبة عدم الإتمام: قفل التطبيق 1 ساعة</span></div><p class="font-body-sm text-body-sm text-on-surface leading-relaxed">إذا لم يتم فتح وقراءة القرآن الكريم لمدة 15 دقيقة يومياً قبل انقضاء اليوم، يتم حظر وقفل التطبيق كاملاً لمدة ساعة واحدة متواصلة دون استثناء لإعادة ضبط الأولويات والبوصلة الروحية.</p></div></div></div><div class="p-space-md rounded-DEFAULT bg-surface-container-low/80 border border-primary-container/25 flex flex-col md:flex-row items-start justify-between gap-space-md shadow-md"><div class="flex items-start gap-space-sm"><div class="p-2 rounded-full bg-primary-container/20 text-primary-container shrink-0 mt-0.5"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">nights_stay</span></div><div class="flex flex-col gap-1"><div class="flex items-center gap-2 flex-wrap"><span class="font-label-lg text-label-lg text-primary font-bold">بروتوكول السكينة والتهجد بعد منتصف الليل</span><span class="bg-primary-container/20 text-primary-fixed text-[10px] font-bold px-2 py-0.5 rounded-full border border-primary-container/30">تثبيت ليلي إجباري بعد 12:00 ص</span></div><p class="font-body-sm text-body-sm text-on-surface leading-relaxed">تبقى شاشة التطبيق مثبتة إجبارياً على لافتة ومصحف القرآن الكريم بعد منتصف الليل (12:00 ص - 06:00 ص) ويُمنع نهائياً الانتقال لأي محتوى ترفيهي أو موجز الشورتس لإعلاء السكينة والتهجد وحماية قيام الليل.</p></div></div></div><div class="p-space-md rounded-DEFAULT bg-surface-container/60 flex items-center justify-between"><div class="flex flex-col pr-1"><span class="font-label-lg text-label-lg text-on-surface flex items-center gap-2">تفعيل حظر الورد القرآني وقفل ما بعد منتصف الليل تلقائياً<span class="bg-primary-container/20 text-primary-fixed text-[10px] font-bold px-2 py-0.5 rounded-full">نشط دائماً</span></span><span class="font-body-sm text-body-sm text-on-surface-variant">إلزام حسابك بالقفل الصارم للترفيه والمطالبة بإتمام الـ 15 دقيقة والتثبيت الليلي.</span></div><label class="relative inline-flex items-center cursor-pointer shrink-0 mr-space-md"><input checked="" class="sr-only peer" type="checkbox"><div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-surface peer-checked:after:bg-on-primary peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-outline after:border-surface after:rounded-full after:h-5 after:w-5 after:transition-all"></div></label></div></div><div class="lg:col-span-4 flex flex-col justify-between p-space-md rounded-DEFAULT bg-surface-container-low/90 border border-primary-container/25 shadow-lg"><div class="flex flex-col gap-space-sm"><div class="flex items-center justify-between border-b border-surface-container-highest/60 pb-2"><span class="font-label-lg text-label-lg text-on-surface font-bold flex items-center gap-1.5"><span class="material-symbols-outlined text-primary-container text-[18px]">auto_stories</span> المصحف الشريف والورد اليومي</span><span class="font-label-sm text-[11px] text-primary-fixed">سورة الكهف • ص 293</span></div><div class="p-space-sm rounded bg-surface-container-lowest/90 border border-surface-container-highest/60 text-center flex flex-col items-center justify-center py-space-md"><span class="font-body-sm text-primary-container text-[13px] font-bold mb-1">﴿ إِنَّ هَٰذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ ﴾</span><span class="font-label-sm text-[11px] text-outline">تم إنجاز 66% من ورد اليوم (10 من 15 دقيقة)</span><div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden mt-space-sm"><div class="h-full bg-primary-container rounded-full" style="width: 66%;"></div></div></div><div class="flex flex-col gap-1 text-[11px] text-on-surface-variant"><div class="flex items-center justify-between"><span class="">الوقت المتبقي لانتهاء اليوم:</span><span class="font-bold text-on-surface">5 ساعات و 42 دقيقة</span></div><div class="flex items-center justify-between"><span class="">التثبيت الليلي القادم:</span><span class="font-bold text-tertiary-fixed">الساعة 12:00 منتصف الليل</span></div></div></div><button class="mt-space-md w-full py-space-sm px-space-md rounded-full bg-primary-container text-on-primary-container font-headline-sm text-label-lg font-bold shadow-[0_0_15px_rgba(0,242,254,0.3)] hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-all flex items-center justify-center gap-2" type="button"><span class="material-symbols-outlined text-[20px]">menu_book</span> فتح المصحف والورد اليومي (ابدأ 15 دقيقة)</button></div></div></section>
+<!-- Additional Platform Unified Settings Bento Matrix -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Card 1: Cross-Posting Sync Matrix -->
+<section class="flex flex-col justify-between bg-surface-container p-space-lg rounded-xl shadow-md">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface">حسابات النشر الموحد</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline">5 منصات</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            إدارة تدفق المنشورات وبث المحتوى دفعة واحدة لجميع قنواتك الاجتماعية بضغطة زر واحدة.
+          </p>
+<!-- Connected Accounts List -->
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<!-- YouTube -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-high/60 rounded-DEFAULT">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">YouTube Studio</span>
+<span class="font-label-sm text-label-sm text-outline">@omnipulse_channel</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-primary-container/15 text-primary-fixed px-2 py-0.5 rounded-full">متصل</span>
+</div>
+<!-- TikTok -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-high/60 rounded-DEFAULT">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">music_video</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">TikTok Pro</span>
+<span class="font-label-sm text-label-sm text-outline">@pulse_arabia</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-primary-container/15 text-primary-fixed px-2 py-0.5 rounded-full">متصل</span>
+</div>
+<!-- Instagram -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-high/60 rounded-DEFAULT">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-[18px]">camera</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Instagram Reels</span>
+<span class="font-label-sm text-label-sm text-outline">@omni.official</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-primary-container/15 text-primary-fixed px-2 py-0.5 rounded-full">متصل</span>
+</div>
+<!-- X / Twitter -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-high/60 rounded-DEFAULT">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[18px]">tag</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">X Platform</span>
+<span class="font-label-sm text-label-sm text-outline">@omni_live</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-primary-container/15 text-primary-fixed px-2 py-0.5 rounded-full">متصل</span>
+</div>
+<!-- Snapchat -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-high/60 rounded-DEFAULT">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary-container/20 flex items-center justify-center text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Snapchat Spotlight</span>
+<span class="font-label-sm text-label-sm text-outline">غير مقترن</span>
+</div>
+</div>
+<button class="font-label-sm text-label-sm text-on-surface hover:text-primary-container px-2 py-0.5 rounded-full bg-surface-container-highest hover:bg-surface-bright transition-colors">
+                ربط +
+              </button>
+</div>
+</div>
+</div>
+<button class="mt-space-md w-full py-space-sm rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">sync_alt</span>
+          إدارة الصلاحيات ومفاتيح الـ API
+        </button>
+</section>
+<!-- Card 2: Privacy, Snaps & Encryption -->
+<section class="flex flex-col justify-between bg-surface-container p-space-lg rounded-xl shadow-md">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-tertiary-container/20 flex items-center justify-center text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-[20px]">security</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface">الخصوصية والأمان المشدد</h2>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">verified_user</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            إعدادات التشفير التام، حماية الرسائل الخاصة، والتحكم في ظهور القصص السريعة (Snaps).
+          </p>
+<div class="flex flex-col gap-space-sm mt-space-xs"><div class="p-space-sm bg-primary-container/15 border border-primary-container/30 rounded-DEFAULT flex flex-col gap-2"><div class="flex items-center justify-between"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-container text-[20px]" style="font-variation-settings: 'FILL' 1;">lock</span><span class="font-label-md text-label-md text-primary font-bold">حظر وتجريد البوت من فحص أو دخول المحادثات الخاصة (Absolute DM Privacy Protocol)</span></div><span class="font-label-sm text-[10px] bg-primary-container text-on-primary-container font-bold px-2 py-0.5 rounded-full shrink-0">حماية دستورية مشفرة وغير قابلة للاختراق</span></div><p class="font-body-sm text-[11px] text-on-surface-variant leading-relaxed">المحادثات الخاصة والمراسلات الثنائية بين المستخدمين مشفرة بالكامل طرفاً لطرف (E2EE) ومحمية ومحظورة قطعياً على بوت الرقابة OmniGuard AI أو أي طرف ثالث. لن يتم التدخل فيها أو مراقبتها أو قراءتها نهائياً مهما أرسل المستخدمون لبعضهم.</p><div class="flex items-center justify-between pt-1 border-t border-primary-container/20"><span class="font-label-sm text-[11px] text-primary-fixed flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">verified_user</span> قفل الخصوصية الصارم (نشط إجبارياً)</span><label class="relative inline-flex items-center cursor-not-allowed shrink-0"><input checked="" disabled="" class="sr-only peer" type="checkbox"><div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-surface peer-checked:after:bg-on-primary peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-outline after:border-surface after:rounded-full after:h-5 after:w-5 after:transition-all opacity-90"></div></label></div></div>
+<!-- Ephemeral Snaps Auto-Wipe -->
+<div class="p-space-sm bg-surface-container-high/60 rounded-DEFAULT flex items-center justify-between">
+<div class="flex flex-col pr-1">
+<span class="font-label-md text-label-md text-on-surface">مسح السنابات فور المشاهدة</span>
+<span class="font-label-sm text-label-sm text-outline">حذف الوسائط والصور مباشرة من السيرفر</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-surface peer-checked:after:bg-on-primary peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-outline after:border-surface after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+<!-- Follower Synchronization -->
+<div class="p-space-sm bg-surface-container-high/60 rounded-DEFAULT flex items-center justify-between">
+<div class="flex flex-col pr-1">
+<span class="font-label-md text-label-md text-on-surface">مزامنة المتابعين التلقائية</span>
+<span class="font-label-sm text-label-sm text-outline">توحيد قوائم الصداقة عبر القنوات المربوطة</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-surface peer-checked:after:bg-on-primary peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-outline after:border-surface after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+<!-- E2EE Direct Chats -->
+<div class="p-space-sm bg-surface-container-high/60 rounded-DEFAULT flex items-center justify-between">
+<div class="flex flex-col pr-1">
+<span class="font-label-md text-label-md text-on-surface">التشفير الطرفي للرسائل (E2EE)</span>
+<span class="font-label-sm text-label-sm text-outline">بروتوكول تشفير Signal المتقدم</span>
+</div>
+<span class="material-symbols-outlined text-primary-container text-[20px]" style="font-variation-settings: 'FILL' 1;">lock_open_right</span>
+</div>
+<!-- Ghost Mode -->
+<div class="p-space-sm bg-surface-container-high/60 rounded-DEFAULT flex items-center justify-between">
+<div class="flex flex-col pr-1">
+<span class="font-label-md text-label-md text-on-surface">وضع التخفي (Ghost Mode)</span>
+<span class="font-label-sm text-label-sm text-outline">إخفاء علامة "متصل الآن" وموقع الخريطة</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-surface peer-checked:after:bg-on-primary peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-outline after:border-surface after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+</div>
+</div>
+<button class="mt-space-md w-full py-space-sm rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">key</span>
+          إعداد رمز PIN للقفل الصارم
+        </button>
+</section>
+<!-- Card 3: Display Aesthetics & Cinema Playback Defaults -->
+<section class="flex flex-col justify-between bg-surface-container p-space-lg rounded-xl shadow-md md:col-span-2 lg:col-span-1">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-[20px]">palette</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface">المظهر وتجربة المشاهدة</h2>
+</div>
+<span class="font-label-sm text-label-sm text-primary-fixed">Obsidian FX</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            ضبط محرك العرض المرئي، وتيرة تشغيل الفيديو، وتنسيق الألوان الزجاجية.
+          </p>
+<div class="flex flex-col gap-space-sm mt-space-xs">
+<!-- Theme Selection -->
+<div class="p-space-sm bg-surface-container-high/60 rounded-DEFAULT flex flex-col gap-2">
+<span class="font-label-md text-label-md text-on-surface">وضع السطح المظلم</span>
+<div class="grid grid-cols-2 gap-2">
+<div class="p-2 rounded-DEFAULT bg-primary-container text-on-primary-container flex items-center justify-center gap-1.5 cursor-pointer font-label-sm text-label-sm font-bold shadow-[0_0_12px_rgba(0,242,254,0.3)]">
+<span class="material-symbols-outlined text-[16px]">dark_mode</span>
+<span class="">الأسود المتفجر</span>
+</div>
+<div class="p-2 rounded-DEFAULT bg-surface-container-highest text-on-surface flex items-center justify-center gap-1.5 cursor-pointer font-label-sm text-label-sm hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-[16px]">contrast</span>
+<span class="">سليت سينمائي</span>
+</div>
+</div>
+</div>
+<!-- Default Playback Speed -->
+<div class="p-space-sm bg-surface-container-high/60 rounded-DEFAULT flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">سرعة التشغيل الافتراضية</span>
+<span class="font-label-sm text-label-sm text-outline">لفيديوهات السينما والشورتس</span>
+</div>
+<select class="bg-surface-container-highest text-primary-fixed font-label-md text-label-md rounded px-2 py-1 focus:outline-none cursor-pointer">
+<option value="1.0">1.0x (طبيعي)</option>
+<option selected="" value="1.25">1.25x (سريع)</option>
+<option value="1.5">1.5x (مكثف)</option>
+<option value="2.0">2.0x (فائق)</option>
+</select>
+</div>
+<!-- Video Quality Preference -->
+<div class="p-space-sm bg-surface-container-high/60 rounded-DEFAULT flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">جودة تدفق الفيديو التلقائية</span>
+<span class="font-label-sm text-label-sm text-outline">توفير البيانات والبطارية</span>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary-container/20 text-secondary-fixed px-2 py-1 rounded-DEFAULT">4K الذكية</span>
+</div>
+<!-- Ambient Video Glow Effect -->
+<div class="p-space-sm bg-surface-container-high/60 rounded-DEFAULT flex items-center justify-between">
+<div class="flex flex-col pr-1">
+<span class="font-label-md text-label-md text-on-surface">التوهج المحيطي للشاشة (Ambient Glow)</span>
+<span class="font-label-sm text-label-sm text-outline">انعكاس ألوان الشورتس على خلفية الصفحة</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-surface peer-checked:after:bg-on-primary peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-outline after:border-surface after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+</div>
+</div>
+<button class="mt-space-md w-full py-space-sm rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">restore</span>
+          استعادة التفضيلات الافتراضية
+        </button>
+</section>
+</div>
+<!-- Active Breathing & Relax Modal Simulation Strip -->
+<section class="relative overflow-hidden rounded-xl bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-lowest p-space-lg md:p-space-xl shadow-[0_20px_50px_rgba(0,0,0,0.6)] flex flex-col gap-space-lg"><div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md border-b border-surface-container-highest/60 pb-space-md"><div class="flex items-center gap-space-md"><div class="relative w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary-container shrink-0 shadow-[0_0_15px_rgba(0,242,254,0.3)]"><span class="material-symbols-outlined text-[26px]">smart_toy</span><span class="absolute -top-1 -right-1 w-3 h-3 bg-primary-container rounded-full animate-ping"></span></div><div class="flex flex-col"><div class="flex items-center gap-space-sm"><h2 class="font-headline-sm text-headline-sm text-primary">بوت الرقابة الذكي والحظر التلقائي (OmniGuard AI)</h2><span class="bg-primary-container/15 text-primary-fixed text-label-sm font-bold px-2 py-0.5 rounded-full flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span> مفعّل بالذكاء الاصطناعي</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">خوارزمية رصد وتحييد فورية لتنقية الخلاصات الرقمية، حظر صُنّاع المحتوى غير اللائق، وضبط استثناءات المحتوى والأنمي وقواعد النشر النظيف.</p></div></div><div class="flex items-center gap-space-sm shrink-0"><span class="font-label-sm text-label-sm text-on-surface-variant">حالة النظام:</span><span class="font-label-sm text-label-sm bg-surface-container-highest text-primary-fixed px-space-sm py-1 rounded-full flex items-center gap-1.5 border border-primary-container/30"><span class="material-symbols-outlined text-[16px] text-primary-container">verified</span> فحص متزامن 24/7</span></div></div><div class="relative overflow-hidden rounded-xl bg-gradient-to-r from-error-container/40 via-surface-container-high/80 to-surface-container-low p-space-md border border-secondary-container/40 shadow-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md"><div class="flex items-start gap-space-md"><div class="p-2.5 rounded-xl bg-secondary-container/20 text-secondary-container shrink-0 shadow-[0_0_8px_rgba(255,80,110,0.6)] mt-0.5"><span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">gavel</span></div><div class="flex flex-col gap-1"><div class="flex items-center gap-space-sm flex-wrap"><span class="font-label-lg text-label-lg text-secondary font-bold flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>تنبيه صارم / سياسة العقوبات الفورية (OmniGuard AI)</span><span class="font-label-sm text-label-sm bg-secondary-container/20 text-secondary-fixed border border-secondary-container/30 px-2.5 py-0.5 rounded-full font-bold shadow-[0_0_8px_rgba(255,80,110,0.4)]">عقوبة الحظر: 7 أيام كاملة + نزع الفيديو المخالف نهائياً</span></div><p class="font-body-sm text-body-sm text-on-surface leading-relaxed">تنبيه رسمي من OmniGuard AI: أي حساب يتم ضبطه بنشر سفاهات، أو أفلام ومسلسلات واقعية، أو فيديوهات الذكاء الاصطناعي والمشاهد المولدة آلياً (AI/Deepfake) غير المصرح بها، يُحظر لمدة 7 أيام كاملة من التطبيق وجميع ميزاته، ويتم نزع وحذف الفيديو غير القانوني فوراً من قناته وحسابه تلقائياً دون إنذار مسبق.</p><div class="p-space-xs rounded bg-surface-container-lowest/80 border border-primary-container/30 flex items-center gap-space-xs mt-1"><span class="material-symbols-outlined text-primary-container text-[18px] shrink-0">shield_lock</span><span class="font-body-sm text-[11px] text-primary-fixed leading-tight"><strong>استثناء وحصانة تامة:</strong> نطاق عمل البوت يقتصر حصراً على المنشورات العامة والشورتس والقنوات. المحادثات والرسائل الخاصة محمية بتشفير صفري ولا يملك البوت أي صلاحية أو قدرة على الوصول إليها مهما كان المحتوى المتداول.</span></div></div></div><div class="flex items-center gap-space-xs shrink-0 bg-surface-container-lowest/80 px-space-md py-space-sm rounded-lg border border-secondary-container/20"><span class="material-symbols-outlined text-secondary-container text-[20px]">verified</span><span class="font-label-sm text-[11px] text-on-surface font-bold">تطبيق تلقائي فوري 100%</span></div></div><div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg"><div class="lg:col-span-7 flex flex-col gap-space-md"><div class="flex items-center justify-between p-space-md rounded-DEFAULT bg-surface-container-low/80 hover:bg-surface-container-high transition-all"><div class="flex items-start gap-space-md"><div class="p-2 rounded-full bg-secondary-container/20 text-secondary-container shrink-0 mt-0.5"><span class="material-symbols-outlined text-[20px]">block</span></div><div class="flex flex-col pr-1"><span class="font-label-lg text-label-lg text-on-surface flex items-center gap-2">حظر تلقائي للحسابات التي تنشر سفاهات ومحتوى غير لائق<span class="bg-secondary-container/20 text-secondary-fixed text-[10px] font-bold px-2 py-0.5 rounded-full">حظر صارم</span></span><span class="font-body-sm text-body-sm text-on-surface-variant">كشف فوري للألفاظ النابية والإيحاءات والابتذال وحظر الحساب والقناة فوراً مع تقرير تحذيري.</span></div></div><label class="relative inline-flex items-center cursor-pointer shrink-0 mr-space-md"><input checked="" class="sr-only peer" type="checkbox"><div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-surface peer-checked:after:bg-on-primary peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-outline after:border-surface after:rounded-full after:h-5 after:w-5 after:transition-all"></div></label></div><div class="flex items-center justify-between p-space-md rounded-DEFAULT bg-surface-container-low/80 hover:bg-surface-container-high transition-all"><div class="flex items-start gap-space-md"><div class="p-2 rounded-full bg-surface-container-highest text-on-surface-variant shrink-0 mt-0.5"><span class="material-symbols-outlined text-[20px]">videocam_off</span></div><div class="flex flex-col pr-1"><span class="font-label-lg text-label-lg text-on-surface flex items-center gap-2">فلترة الأفلام والمسلسلات الحقيقية (Real Cinema Ban)<span class="bg-surface-container-highest text-outline text-[10px] font-bold px-2 py-0.5 rounded-full">بيئة نقية</span></span><span class="font-body-sm text-body-sm text-on-surface-variant">حظر نشر وتضمين مقاطع المسلسلات والأفلام الواقعية والمشاهد التمثيلية في الخلاصة.</span></div></div><label class="relative inline-flex items-center cursor-pointer shrink-0 mr-space-md"><input checked="" class="sr-only peer" type="checkbox"><div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-surface peer-checked:after:bg-on-primary peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-outline after:border-surface after:rounded-full after:h-5 after:w-5 after:transition-all"></div></label></div><div class="flex items-center justify-between p-space-md rounded-DEFAULT bg-surface-container-low/80 hover:bg-surface-container-high transition-all"><div class="flex items-start gap-space-md"><div class="p-2 rounded-full bg-primary-container/20 text-primary-container shrink-0 mt-0.5"><span class="material-symbols-outlined text-[20px]">animation</span></div><div class="flex flex-col pr-1"><span class="font-label-lg text-label-lg text-on-surface flex items-center gap-2">استثناء وتصريح محتوى الأنمي (Anime Permitted)<span class="bg-primary-container/15 text-primary-fixed text-[10px] font-bold px-2 py-0.5 rounded-full">مسموح ومُرخص</span></span><span class="font-body-sm text-body-sm text-on-surface-variant">السماح بمرور وتغذية مقاطع الرسوم المتحركة والأنمي الهادفة مع إخضاعها للفحص الصوتي.</span></div></div><label class="relative inline-flex items-center cursor-pointer shrink-0 mr-space-md"><input checked="" class="sr-only peer" type="checkbox"><div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-surface peer-checked:after:bg-on-primary peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-outline after:border-surface after:rounded-full after:h-5 after:w-5 after:transition-all"></div></label></div><div class="flex items-center justify-between p-space-md rounded-DEFAULT bg-surface-container-low/80 hover:bg-surface-container-high transition-all"><div class="flex items-start gap-space-md"><div class="p-2 rounded-full bg-secondary-container/20 text-secondary-container shrink-0 mt-0.5"><span class="material-symbols-outlined text-[20px]">psychology</span></div><div class="flex flex-col pr-1"><span class="font-label-lg text-label-lg text-on-surface flex items-center gap-2">حظر ومراقبة فيديوهات الذكاء الاصطناعي (AI Generated &amp; Deepfake Ban)<span class="bg-secondary-container/20 text-secondary-fixed text-[10px] font-bold px-2 py-0.5 rounded-full">فحص خوارزمي متقدم</span></span><span class="font-body-sm text-body-sm text-on-surface-variant">كشف تلقائي بالبصمة العصبية للمشاهد والوجوه المولدة بالذكاء الاصطناعي وحظر المحتوى المضلل أو السفيه فوراً مع تطبيق عقوبة الحظر 7 أيام.</span></div></div><label class="relative inline-flex items-center cursor-pointer shrink-0 mr-space-md"><input checked="" class="sr-only peer" type="checkbox"><div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-surface peer-checked:after:bg-on-primary peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-outline after:border-surface after:rounded-full after:h-5 after:w-5 after:transition-all"></div></label></div><div class="p-space-md rounded-DEFAULT bg-surface-container-high/60 border border-primary-container/25 flex flex-col gap-space-sm"><div class="flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary-container text-[20px]">policy</span><span class="font-label-lg text-label-lg text-primary font-bold">قاعدة مخصصة: المحقق كونان (Detective Conan Protocol)</span></div><span class="font-label-sm text-label-sm bg-primary-container text-on-primary-container font-bold px-2 py-0.5 rounded-full">نشط</span></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm mt-space-xs"><div class="flex items-start gap-space-sm p-space-xs bg-surface-container/70 rounded-DEFAULT"><span class="material-symbols-outlined text-tertiary-fixed text-[18px] mt-0.5">volume_off</span><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface">فلتر إزالة الموسيقى تلقائياً</span><span class="font-label-sm text-label-sm text-outline">صوتيات نظيفة: مؤثرات أو أناشيد فقط</span></div></div><div class="flex items-start gap-space-sm p-space-xs bg-surface-container/70 rounded-DEFAULT"><span class="material-symbols-outlined text-primary-fixed text-[18px] mt-0.5">copyright</span><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface">فاحص حقوق النشر (Zero Copyright)</span><span class="font-label-sm text-label-sm text-outline">فحص التعدي وحذف المقاطع فورياً</span></div></div></div></div></div><div class="lg:col-span-5 flex flex-col justify-between bg-surface-container-low/70 backdrop-blur-xl p-space-md rounded-lg shadow-lg"><div class="flex flex-col gap-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary-container text-[20px]">receipt_long</span><span class="font-title-md text-title-md text-on-surface">سجل الإجراءات اللحظية للبوت</span></div><span class="font-label-sm text-label-sm text-primary-fixed">Live Log</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">عمليات الفحص والتنقية التلقائية خلال آخر 60 دقيقة</p></div><div class="flex flex-col gap-space-xs mt-space-sm"><div class="p-space-xs bg-surface-container-high/60 rounded flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary-container text-[18px]">smart_toy</span><div class="flex flex-col"><span class="font-label-sm text-on-surface font-bold">تم رصد وحذف فيديو ذكاء اصطناعي مزيف (AI Deepfake) وحظر الحساب @ai_spammer_bot</span><span class="font-label-sm text-[10px] text-secondary">سبب: تزييف عميق غير قانوني ومحتوى مضلل • ساري المفعول حتى 7 أيام</span></div></div><span class="font-label-sm text-[10px] text-secondary bg-secondary-container/20 px-2 py-0.5 rounded font-bold shrink-0">محظور 7 أيام</span></div><div class="p-space-xs bg-surface-container-high/60 rounded flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary-container text-[18px]">delete_forever</span><div class="flex flex-col"><span class="font-label-sm text-on-surface font-bold">تم حذف مقطع غير قانوني وحظر الحساب @spammer_reel</span><span class="font-label-sm text-[10px] text-secondary">سبب: ألفاظ نابية ومحتوى سفاهات • ساري المفعول حتى 7 أيام</span></div></div><span class="font-label-sm text-[10px] text-secondary bg-secondary-container/20 px-2 py-0.5 rounded font-bold shrink-0">محظور 7 أيام</span></div><div class="p-space-xs bg-surface-container-high/60 rounded flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary-container text-[18px]">music_off</span><div class="flex flex-col"><span class="font-label-sm text-on-surface font-bold">تنقية مقطع كونان الحلقة 345</span><span class="font-label-sm text-[10px] text-outline">عزل الموسيقى تلقائياً بنجاح (Audio Scrub)</span></div></div><span class="font-label-sm text-[10px] text-primary-fixed bg-primary-container/20 px-2 py-0.5 rounded">مُنقى بنجاح</span></div><div class="p-space-xs bg-surface-container-high/60 rounded flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-outline text-[18px]">movie</span><div class="flex flex-col"><span class="font-label-sm text-on-surface font-bold">حظر مقطع مشهد تمثيلي واقعي</span><span class="font-label-sm text-[10px] text-outline">تطبيق بروتوكول Real Cinema Ban</span></div></div><span class="font-label-sm text-[10px] text-outline-variant bg-surface-container-highest px-2 py-0.5 rounded">محظور</span></div><div class="p-space-xs bg-surface-container-high/60 rounded flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-tertiary-fixed text-[18px]">shield</span><div class="flex flex-col"><span class="font-label-sm text-on-surface font-bold">فحص حقوق الملكية للأنمي</span><span class="font-label-sm text-[10px] text-outline">مطابقة آمنة بنسبة 100% بدون مطالبات</span></div></div><span class="font-label-sm text-[10px] text-tertiary-fixed-dim bg-tertiary-container/20 px-2 py-0.5 rounded">آمن للنشر</span></div></div><button class="mt-space-sm w-full py-1.5 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all flex items-center justify-center gap-1.5"><span class="material-symbols-outlined text-[16px]">history</span> عرض السجل الرقابي الكامل</button></div></div></section><div class="p-space-lg rounded-xl bg-gradient-to-r from-surface-container-low via-surface-container to-surface-container-low flex flex-col md:flex-row items-center justify-between gap-space-lg shadow-inner">
+<div class="flex items-center gap-space-md">
+<div class="relative w-12 h-12 flex items-center justify-center shrink-0">
+<div class="absolute inset-0 bg-primary-container/20 rounded-full animate-ping"></div>
+<span class="material-symbols-outlined text-primary-container text-[28px] relative z-10">air</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">تم تفعيل وقفة الاسترخاء اللحظية</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">هل تشعر بالإرهاق البصري من التمرير؟ خذ شهيقاً عميقاً لمدة 4 ثوانٍ، واحبسه 4 ثوانٍ، ثم زفيراً هادئاً.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-space-md py-space-xs rounded-full bg-surface-container-highest hover:bg-surface-bright text-on-surface font-label-md text-label-md transition-colors">
+          تخطي التمرين
+        </button>
+<button class="px-space-lg py-space-xs rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-bold shadow-[0_0_12px_rgba(0,242,254,0.3)] hover:bg-primary-fixed-dim transition-all">
+          بدء تمرين التنفس (20 ث)
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function setQuickLimit(val) {
+    const slider = document.getElementById('limit-slider');
+    const input = document.getElementById('minute-counter-input');
+    const displayTag = document.getElementById('current-limit-tag');
+    
+    if (slider) slider.value = val;
+    if (input) input.value = val;
+    if (displayTag) displayTag.textContent = val;
+
+    // Toggle button styles
+    const buttons = document.querySelectorAll('.preset-btn');
+    buttons.forEach(btn => {
+      btn.classList.remove('bg-primary-container', 'text-on-primary-container', 'shadow-[0_0_15px_rgba(0,242,254,0.3)]');
+      btn.classList.add('bg-surface-container-high', 'text-on-surface');
+      if (btn.innerText.includes(val.toString())) {
+        btn.classList.remove('bg-surface-container-high', 'text-on-surface');
+        btn.classList.add('bg-primary-container', 'text-on-primary-container', 'shadow-[0_0_15px_rgba(0,242,254,0.3)]');
+      }
+    });
+  }
+
+  function syncInputFromSlider(val) {
+    const input = document.getElementById('minute-counter-input');
+    const displayTag = document.getElementById('current-limit-tag');
+    if (input) input.value = val;
+    if (displayTag) displayTag.textContent = val;
+  }
+
+  function syncSliderFromInput(val) {
+    let parsed = parseInt(val, 10);
+    if (isNaN(parsed) || parsed < 5) parsed = 5;
+    if (parsed > 180) parsed = 180;
+    
+    const slider = document.getElementById('limit-slider');
+    const input = document.getElementById('minute-counter-input');
+    const displayTag = document.getElementById('current-limit-tag');
+
+    if (slider) slider.value = parsed;
+    if (input) input.value = parsed;
+    if (displayTag) displayTag.textContent = parsed;
+  }
+
+  function adjustMinutes(delta) {
+    const input = document.getElementById('minute-counter-input');
+    if (!input) return;
+    let current = parseInt(input.value, 10) || 45;
+    current += delta;
+    if (current < 5) current = 5;
+    if (current > 180) current = 180;
+    syncSliderFromInput(current);
+  }
+</script></main></div>
+
+<!-- OmniPulse local messaging + video uploader -->
+<style>
+#op-tools{position:fixed;left:16px;bottom:16px;z-index:99999;display:flex;gap:8px;flex-wrap:wrap;font-family:Arial,sans-serif;direction:rtl}
+#op-tools button,#op-panel button{border:0;border-radius:999px;padding:10px 14px;background:#00e8f2;color:#06272a;font-weight:700;cursor:pointer;box-shadow:0 4px 18px #00e8f244}
+#op-panel{position:fixed;left:16px;bottom:72px;width:min(420px,calc(100vw - 32px));max-height:72vh;overflow:auto;z-index:100000;display:none;background:#191820;color:#f3f4f6;border:1px solid #3a4950;border-radius:18px;padding:16px;box-shadow:0 16px 50px #0009;font-family:Arial,sans-serif;direction:rtl}
+#op-panel h3{margin:0 0 12px;font-size:18px}#op-panel input,#op-panel textarea{box-sizing:border-box;width:100%;border:1px solid #3a4950;border-radius:10px;background:#24232b;color:white;padding:10px;margin:6px 0 10px;font:inherit}#op-panel textarea{min-height:75px;resize:vertical}#op-panel .op-muted{color:#aab7bc;font-size:12px;line-height:1.6}#op-panel .op-tabs{display:flex;gap:8px;margin-bottom:12px}#op-panel .op-tabs button{flex:1;padding:9px 6px}#op-panel .op-entry{background:#24232b;border-radius:12px;padding:10px;margin:8px 0;overflow-wrap:anywhere}#op-panel video{width:100%;max-height:280px;border-radius:10px;background:#000}#op-panel .op-close{float:left;background:#35343c;color:white;box-shadow:none}#op-videos-feed{max-width:900px;margin:20px auto;padding:0 16px;display:grid;gap:16px;direction:rtl}#op-panel select{font:inherit} .op-like-btn{display:inline-flex;align-items:center;gap:7px;margin-top:10px;padding:8px 14px!important;border-radius:999px!important;background:#30202a!important;color:#ff668a!important;box-shadow:none!important}.op-like-btn.liked{background:#572236!important;color:#ffb3c7!important}.op-delete-btn{display:inline-flex;align-items:center;gap:6px;margin:10px 8px 0 0;padding:8px 14px!important;border-radius:999px!important;background:#492126!important;color:#ffc1c1!important;box-shadow:none!important}.op-kind{display:inline-block;font-size:12px;color:#00e8f2;border:1px solid #3a4950;border-radius:999px;padding:3px 9px;margin:0 0 8px}
+
+#op-panel .op-menu-btn{background:#302f38!important;color:#fff!important;box-shadow:none!important;padding:7px 12px!important;margin-top:8px}.op-overflow-wrap{position:relative;display:flex;justify-content:flex-start;width:100%;margin:0 0 8px 0}.op-overflow-menu{display:none;position:absolute;top:42px;left:0;min-width:170px;background:#25242c;border:1px solid #4b4a55;border-radius:12px;padding:6px;z-index:20;box-shadow:0 8px 24px #0009}.op-overflow-menu.open{display:grid;gap:5px}.op-overflow-menu button{border:0;border-radius:8px;padding:9px 10px;text-align:right;background:#373640;color:#fff;cursor:pointer}.op-overflow-menu button.danger{background:#70252b;color:#fff}#op-videos-feed .op-entry{position:relative}#op-videos-feed video{display:block;width:100%;max-height:72vh;object-fit:contain;background:#000;border-radius:12px}
+@media(max-width:600px){#op-tools{left:8px;right:8px;bottom:calc(8px + env(safe-area-inset-bottom));justify-content:center}#op-tools button{font-size:13px;padding:9px 11px}#op-panel{left:8px;right:8px;bottom:calc(64px + env(safe-area-inset-bottom));width:auto;max-height:76vh}#op-videos-feed{padding-left:8px;padding-right:8px}}
+</style>
+<div id="op-tools"><button type="button" id="op-open-login">🔐 تسجيل الدخول</button><button type="button" id="op-open-account">👤 حسابي</button><button type="button" id="op-open-messages">✉ الرسائل</button><button type="button" id="op-open-video">＋ إضافة فيديو</button></div>
+<section id="op-panel" aria-live="polite">
+<button class="op-close" type="button" id="op-close">إغلاق ✕</button>
+<h3>OmniPulse · أدوات تجريبية</h3>
+<div class="op-tabs"><button type="button" id="op-tab-login">تسجيل الدخول</button><button type="button" id="op-tab-account">حسابي</button><button type="button" id="op-tab-msg">الرسائل</button><button type="button" id="op-tab-video">إضافة فيديو</button></div>
+<div id="op-login-area" hidden><p class="op-muted">تسجيل دخول تجريبي محلي فقط. لا تدخل كلمة مرور حقيقية؛ هذه النسخة لا تحتوي على نظام حسابات آمن أو خادم مصادقة.</p><label for="op-login-name">اسم المستخدم</label><input id="op-login-name" maxlength="40" autocomplete="username" placeholder="اسم المستخدم أو الاسم الظاهر"><label for="op-login-email">البريد الإلكتروني (اختياري)</label><input id="op-login-email" maxlength="120" type="email" autocomplete="email" placeholder="name@example.com"><button type="button" id="op-login-submit">متابعة</button><button type="button" id="op-logout" hidden>تسجيل الخروج</button><p id="op-login-status" class="op-muted" role="status"></p></div>
+<div id="op-account-area" hidden><p class="op-muted">إدارة حسابك التجريبي على هذا المتصفح فقط.</p><label for="op-account-name">اسم الحساب</label><input id="op-account-name" maxlength="40" placeholder="اكتب اسمك"><button type="button" id="op-save-account">حفظ الاسم</button><p id="op-account-status" class="op-muted"></p></div>
+<div id="op-msg-area"><p class="op-muted">هذه نسخة تجريبية محلية: الرسائل تُحفظ في هذا المتصفح فقط، ولا تصل لمستخدمين آخرين حتى توصيل خادم وقاعدة بيانات.</p><label for="op-sender">اسمك</label><input id="op-sender" maxlength="40" placeholder="اسمك أو لقبك"><label for="op-message">اكتب رسالتك</label><textarea id="op-message" maxlength="2000" placeholder="اكتب رسالة..."></textarea><button type="button" id="op-send-message">إرسال الرسالة</button><div id="op-message-list"></div></div>
+<div id="op-video-area" hidden><p class="op-muted">اختر فيديو من جهازك. سيظهر في صفحات OmniPulse على هذا المتصفح. عند النشر على الإنترنت، رفع الفيديو لجميع المستخدمين يحتاج تخزينًا وخادمًا منفصلين.</p><label for="op-video-title">عنوان الفيديو</label><input id="op-video-title" maxlength="100" placeholder="مثال: لقطة من حلقة"><label for="op-video-kind">أين تريد نشر الفيديو؟</label><select id="op-video-kind" style="box-sizing:border-box;width:100%;border:1px solid #3a4950;border-radius:10px;background:#24232b;color:white;padding:10px;margin:6px 0 10px;font:inherit"><option value="shorts">شورتس (فيديو قصير)</option><option value="regular">الفيديوهات العادية</option><option value="both" selected>شورتس والفيديوهات العادية معًا</option></select><label for="op-video-file">اختر ملف فيديو (MP4 أو WebM)</label><input id="op-video-file" type="file" accept="video/mp4,video/webm,video/ogg"><button type="button" id="op-publish-video">نشر الفيديو</button><p id="op-video-status" class="op-muted"></p></div>
+</section>
+<div id="op-videos-feed" aria-label="الفيديوهات التي أضفتها"></div>
+<script>
+(function(){
+ const $=id=>document.getElementById(id); const panel=$('op-panel'), msgArea=$('op-msg-area'), vidArea=$('op-video-area'), accountArea=$('op-account-area'), loginArea=$('op-login-area');
+ const MSG_KEY='omnipulse_demo_messages_v1';
+ function showPanel(tab){panel.style.display='block';showTab(tab)} function showTab(tab){msgArea.hidden=tab!=='msg';vidArea.hidden=tab!=='video';accountArea.hidden=tab!=='account';loginArea.hidden=tab!=='login';$('op-tab-msg').style.opacity=tab==='msg'?'1':'.65';$('op-tab-video').style.opacity=tab==='video'?'1':'.65';$('op-tab-account').style.opacity=tab==='account'?'1':'.65';$('op-tab-login').style.opacity=tab==='login'?'1':'.65';if(tab==='msg')renderMessages();if(tab==='account')loadAccount();if(tab==='login')loadLogin()}
+ $('op-open-login').addEventListener('click',()=>showPanel('login')); $('op-tab-login').addEventListener('click',()=>showTab('login')); $('op-open-account').addEventListener('click',()=>showPanel('account')); $('op-tab-account').addEventListener('click',()=>showTab('account')); $('op-open-messages').addEventListener('click',()=>showPanel('msg')); $('op-open-video').addEventListener('click',()=>showPanel('video')); $('op-close').addEventListener('click',()=>panel.style.display='none');$('op-tab-msg').addEventListener('click',()=>showTab('msg'));$('op-tab-video').addEventListener('click',()=>showTab('video'));
+ function getMessages(){try{return JSON.parse(localStorage.getItem(MSG_KEY)||'[]')}catch(e){return []}}
+ function renderMessages(){const box=$('op-message-list');box.replaceChildren();const items=getMessages();if(!items.length){const p=document.createElement('p');p.className='op-muted';p.textContent='لا توجد رسائل بعد. اكتب أول رسالة أعلاه.';box.appendChild(p);return}items.slice(-30).reverse().forEach(m=>{const d=document.createElement('div');d.className='op-entry';const b=document.createElement('b');b.textContent=m.name+' · ';const time=document.createElement('small');time.className='op-muted';time.textContent=m.time;const p=document.createElement('div');p.textContent=m.text;d.append(b,time,p);box.appendChild(d)})}
+ $('op-send-message').addEventListener('click',()=>{const text=$('op-message').value.trim();const name=$('op-sender').value.trim()||'مستخدم OmniPulse';if(!text){$('op-message').focus();return}const list=getMessages();list.push({name,text,time:new Date().toLocaleString('ar')});try{localStorage.setItem(MSG_KEY,JSON.stringify(list.slice(-100)));$('op-message').value='';renderMessages()}catch(e){alert('تعذر حفظ الرسالة في المتصفح.')}});
+ const DB='omnipulse_local_videos', STORE='videos';let dbp;const OWNER_KEY='omnipulse_local_owner_v1';let ownerId=localStorage.getItem(OWNER_KEY);if(!ownerId){ownerId='owner-'+Date.now()+'-'+Math.random().toString(16).slice(2);try{localStorage.setItem(OWNER_KEY,ownerId)}catch(e){}}
+ const PROFILE_KEY='omnipulse_profile_name_v1';const LOGIN_KEY='omnipulse_demo_login_v1';function loadLogin(){let u={};try{u=JSON.parse(localStorage.getItem(LOGIN_KEY)||'{}')}catch(e){}$('op-login-name').value=u.name||localStorage.getItem(PROFILE_KEY)||'';$('op-login-email').value=u.email||'';$('op-login-status').textContent=u.name?'تم تسجيل الدخول محليًا باسم '+u.name+'.':'أدخل اسم مستخدم للمتابعة.';$('op-logout').hidden=!u.name;$('op-open-login').textContent=u.name?'👤 '+u.name:'🔐 تسجيل الدخول'}$('op-login-submit').addEventListener('click',()=>{const name=$('op-login-name').value.trim(),email=$('op-login-email').value.trim();if(!name){$('op-login-status').textContent='اكتب اسم المستخدم أولًا.';return}const u={name,email};try{localStorage.setItem(LOGIN_KEY,JSON.stringify(u));localStorage.setItem(PROFILE_KEY,name);$('op-login-status').textContent='تم تسجيل الدخول التجريبي باسم '+name+' على هذا المتصفح فقط.';$('op-logout').hidden=false;$('op-open-login').textContent='👤 '+name;$('op-account-name').value=name}catch(e){$('op-login-status').textContent='تعذر حفظ الجلسة في المتصفح.'}});$('op-logout').addEventListener('click',()=>{localStorage.removeItem(LOGIN_KEY);$('op-login-name').value='';$('op-login-email').value='';$('op-login-status').textContent='تم تسجيل الخروج من الجلسة التجريبية.';$('op-logout').hidden=true;$('op-open-login').textContent='🔐 تسجيل الدخول'});function loadAccount(){const input=$('op-account-name');if(input)input.value=localStorage.getItem(PROFILE_KEY)||'';} $('op-save-account').addEventListener('click',()=>{const name=$('op-account-name').value.trim();try{if(name)localStorage.setItem(PROFILE_KEY,name);else localStorage.removeItem(PROFILE_KEY);$('op-account-status').textContent=name?'تم حفظ اسم الحساب على هذا المتصفح.':'تم مسح اسم الحساب.'}catch(e){$('op-account-status').textContent='تعذر حفظ الاسم.'}});
+ function openDB(){if(!('indexedDB' in window))return Promise.reject(Error('IndexedDB غير متاح'));if(dbp)return dbp;dbp=new Promise((resolve,reject)=>{const req=indexedDB.open(DB,1);req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains(STORE))req.result.createObjectStore(STORE,{keyPath:'id'})};req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)});return dbp}
+ async function allVideos(){const db=await openDB();return new Promise((resolve,reject)=>{const r=db.transaction(STORE,'readonly').objectStore(STORE).getAll();r.onsuccess=()=>resolve(r.result||[]);r.onerror=()=>reject(r.error)})}
+ async function renderVideos(){const feed=$('op-videos-feed');feed.replaceChildren();let items=[];try{items=await allVideos()}catch(e){return}
+ const page=location.pathname.split('/').pop().toLowerCase();
+ // Shorts page shows short-form uploads; cinema page shows regular uploads; other pages show both.
+ if(page==='shorts.html') items=items.filter(v=>v.kind==='shorts'||v.kind==='both');
+ else if(page==='cinema-original.html') items=items.filter(v=>v.kind==='regular'||v.kind==='both');
+ items.sort((a,b)=>b.created-a.created).forEach(v=>{const card=document.createElement('article');card.className='op-entry';card.style.cssText='background:#191820;border:1px solid #34343d;padding:14px;border-radius:16px;color:#eee';const kind=document.createElement('span');kind.className='op-kind';kind.textContent=v.kind==='both'?'شورتس + فيديو عادي':v.kind==='shorts'?'شورتس':'فيديو عادي';const title=document.createElement('h3');title.textContent=v.title||'فيديو جديد';title.style.margin='0 0 10px';const video=document.createElement('video');video.controls=true;video.preload='metadata';video.playsInline=true;video.src=URL.createObjectURL(v.blob);const meta=document.createElement('p');meta.className='op-muted';meta.textContent='أُضيف من هذا الجهاز · '+new Date(v.created).toLocaleString('ar');const likesKey='omnipulse_video_likes_v1';let likes={};try{likes=JSON.parse(localStorage.getItem(likesKey)||'{}')}catch(e){}const liked=!!likes[v.id]?.liked;const count=Number(likes[v.id]?.count||0);const like=document.createElement('button');like.type='button';like.className='op-like-btn'+(liked?' liked':'');like.innerHTML=(liked?'♥':'♡')+' <span>'+(liked?'أعجبني':'أعجبني')+'</span> · <b>'+count+'</b>';like.setAttribute('aria-label','إعجاب بالفيديو');like.addEventListener('click',()=>{let state={};try{state=JSON.parse(localStorage.getItem(likesKey)||'{}')}catch(e){}const current=state[v.id]||{count:0,liked:false};current.liked=!current.liked;current.count=Math.max(0,Number(current.count||0)+(current.liked?1:-1));state[v.id]=current;try{localStorage.setItem(likesKey,JSON.stringify(state))}catch(e){}like.classList.toggle('liked',current.liked);like.innerHTML=(current.liked?'♥':'♡')+' <span>أعجبني</span> · <b>'+current.count+'</b>';});const actions=document.createElement('div');actions.className='op-overflow-wrap';const dots=document.createElement('button');dots.type='button';dots.className='op-menu-btn';dots.textContent='⋯';dots.setAttribute('aria-label','خيارات الفيديو');const menu=document.createElement('div');menu.className='op-overflow-menu';dots.addEventListener('click',()=>menu.classList.toggle('open'));if(v.ownerId===ownerId){const del=document.createElement('button');del.type='button';del.className='danger';del.textContent='🗑 حذف الفيديو';del.addEventListener('click',async()=>{if(!confirm('هل تريد حذف هذا الفيديو نهائيًا من هذا المتصفح؟'))return;try{const db=await openDB();await new Promise((resolve,reject)=>{const tx=db.transaction(STORE,'readwrite');tx.objectStore(STORE).delete(v.id);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error)});let state={};try{state=JSON.parse(localStorage.getItem(likesKey)||'{}')}catch(e){}delete state[v.id];try{localStorage.setItem(likesKey,JSON.stringify(state))}catch(e){}video.pause();URL.revokeObjectURL(video.src);await renderVideos()}catch(e){alert('تعذر حذف الفيديو. حاول مرة أخرى.')}});menu.appendChild(del);}else{const report=document.createElement('button');report.type='button';report.textContent='خيارات الحساب';report.addEventListener('click',()=>showPanel('account'));menu.appendChild(report)}actions.append(dots,menu);card.append(actions,kind,title,video,like,meta);feed.appendChild(card)})}
+ $('op-publish-video').addEventListener('click',async()=>{const file=$('op-video-file').files[0];const status=$('op-video-status');if(!file){status.textContent='اختر ملف فيديو أولًا.';return}if(!file.type.startsWith('video/')){status.textContent='الملف المختار ليس فيديو.';return}if(file.size>150*1024*1024){status.textContent='حجم الفيديو أكبر من 150 ميغابايت في هذه النسخة التجريبية.';return}status.textContent='جارٍ حفظ الفيديو...';try{const db=await openDB();await new Promise((resolve,reject)=>{const tx=db.transaction(STORE,'readwrite');tx.objectStore(STORE).put({id:Date.now()+'-'+Math.random().toString(16).slice(2),title:$('op-video-title').value.trim()||file.name,blob:file,created:Date.now(),type:file.type,kind:$('op-video-kind').value,ownerId});tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error)});$('op-video-file').value='';$('op-video-title').value='';status.textContent='تم نشر الفيديو في القسم الذي اخترته (على هذا المتصفح فقط).';await renderVideos()}catch(e){status.textContent='تعذر حفظ الفيديو. جرّب تشغيل الموقع عبر استضافة أو خادم محلي.'}});
+ renderMessages();renderVideos();
+ if(document.body.classList.contains('op-shorts-page')){document.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA','SELECT'].includes(document.activeElement&&document.activeElement.tagName))return;const feed=$('op-videos-feed');if(!feed||!feed.children.length)return;if(e.key==='ArrowDown'||e.key==='PageDown'){e.preventDefault();feed.scrollBy({top:feed.clientHeight,behavior:'smooth'})}else if(e.key==='ArrowUp'||e.key==='PageUp'){e.preventDefault();feed.scrollBy({top:-feed.clientHeight,behavior:'smooth'})}})}
+})();
+</script>
+
+<style id="omni-auth-style">
+#omni-auth-gate{position:fixed;inset:0;z-index:2147483000;display:flex;align-items:center;justify-content:center;padding:18px;background:radial-gradient(ellipse at top,#16333a 0,#101016 55%,#09090d 100%);color:#f5f7fa;font-family:Cairo,Arial,sans-serif;direction:rtl}
+#omni-auth-gate[hidden]{display:none!important}#omni-auth-card{width:min(100%,430px);padding:26px;border:1px solid #35464d;border-radius:24px;background:#191a22;box-shadow:0 20px 80px #0009}#omni-auth-card h2{font-size:26px;margin:0 0 6px}#omni-auth-card p{color:#aebcc4;font-size:13px;line-height:1.8}#omni-auth-card label,#omni-profile-modal label{display:block;margin:12px 0 5px;font-size:13px;color:#d8e3e8}#omni-auth-card input,#omni-profile-modal input{width:100%;box-sizing:border-box;padding:12px;border:1px solid #3a4950;border-radius:11px;background:#101117;color:white;font:inherit;outline:none}#omni-auth-card input:focus,#omni-profile-modal input:focus{border-color:#00dce6}#omni-auth-card button,#omni-profile-modal button{border:0;border-radius:11px;padding:11px 14px;font:inherit;font-weight:700;cursor:pointer}#omni-auth-submit{width:100%;margin-top:16px;background:#00dce6;color:#052326}#omni-auth-switch{background:#30323c;color:#e9f2f4;width:100%;margin-top:8px}#omni-auth-status{min-height:24px;color:#ffb2b8!important}#omni-profile-launch{position:fixed;z-index:99999;left:14px;top:14px;border:1px solid #3a4950;border-radius:999px;background:#171820;color:#fff;padding:7px 12px;display:flex;gap:8px;align-items:center;font:600 13px Cairo,Arial,sans-serif;cursor:pointer;box-shadow:0 5px 20px #0005}#omni-profile-launch img{width:28px;height:28px;border-radius:50%;object-fit:cover;background:#343640}#omni-profile-modal{position:fixed;inset:0;z-index:2147482000;background:#000b;display:none;align-items:center;justify-content:center;padding:16px;direction:rtl;font-family:Cairo,Arial,sans-serif;color:#f5f7fa}#omni-profile-modal.open{display:flex}#omni-profile-card{width:min(100%,430px);background:#191a22;border:1px solid #35464d;border-radius:22px;padding:24px;box-shadow:0 20px 80px #0009}#omni-profile-preview{width:100px;height:100px;border-radius:50%;object-fit:cover;display:block;margin:10px auto;border:3px solid #00dce6;background:#30323c}#omni-profile-card .omni-profile-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}#omni-profile-card .omni-profile-actions button:first-child{background:#00dce6;color:#052326}#omni-profile-card .omni-profile-actions button:last-child{background:#30323c;color:#fff}#omni-profile-note{font-size:12px;color:#aebcc4;line-height:1.7}
+</style>
+<div id="omni-auth-gate" role="dialog" aria-modal="true" aria-labelledby="omni-auth-title">
+ <div id="omni-auth-card"><div style="font-size:35px;margin-bottom:6px">◎</div><h2 id="omni-auth-title">مرحبًا بك في OmniPulse</h2><p id="omni-auth-intro">أنشئ حسابًا بكلمة مرور أو سجّل الدخول للمتابعة. لا يمكن فتح المنصة قبل تسجيل الدخول.</p>
+ <form id="omni-auth-form"><label for="omni-auth-username">اسم الحساب</label><input id="omni-auth-username" name="username" autocomplete="username" maxlength="40" required placeholder="اسم المستخدم"><label for="omni-auth-password">كلمة المرور</label><input id="omni-auth-password" name="password" type="password" autocomplete="current-password" minlength="8" required placeholder="8 أحرف على الأقل"><div id="omni-auth-confirm-wrap"><label for="omni-auth-confirm">تأكيد كلمة المرور</label><input id="omni-auth-confirm" type="password" autocomplete="new-password" minlength="8" placeholder="أعد كتابة كلمة المرور"></div><button id="omni-auth-submit" type="submit">إنشاء الحساب</button></form><button id="omni-auth-switch" type="button">لدي حساب بالفعل — تسجيل الدخول</button><p id="omni-auth-status" role="status"></p><p>نسخة تجريبية: الحساب يُحفظ في هذا المتصفح فقط. لحماية حقيقية ومزامنة الحسابات بين الأجهزة، يجب ربط خدمة مصادقة سحابية.</p></div></div>
+<button id="omni-profile-launch" type="button" hidden><img id="omni-profile-launch-img" alt="صورة الحساب"><span id="omni-profile-launch-name">حسابي</span></button>
+<div id="omni-profile-modal" role="dialog" aria-modal="true" aria-labelledby="omni-profile-title"><div id="omni-profile-card"><h2 id="omni-profile-title" style="margin:0;text-align:center">إعدادات الحساب</h2><img id="omni-profile-preview" alt="معاينة صورة الحساب"><label for="omni-profile-image">صورة الحساب</label><input id="omni-profile-image" type="file" accept="image/png,image/jpeg,image/webp,image/gif"><label for="omni-profile-name">اسم الحساب</label><input id="omni-profile-name" maxlength="40" placeholder="اسم المستخدم"><p id="omni-profile-note">اختر صورة من جهازك. تُحفظ الصورة والاسم على هذا المتصفح فقط.</p><div class="omni-profile-actions"><button type="button" id="omni-profile-save">حفظ التغييرات</button><button type="button" id="omni-profile-logout">تسجيل الخروج</button><button type="button" id="omni-profile-close">إغلاق</button></div><p id="omni-profile-status" role="status"></p></div></div>
+<script id="omni-auth-script">
+(()=>{'use strict';
+ const $=id=>document.getElementById(id); const ACCOUNT_KEY='omnipulse_auth_account_v2', SESSION_KEY='omnipulse_auth_session_v2', PROFILE_KEY='omnipulse_auth_profile_v2';
+ const gate=$('omni-auth-gate'), form=$('omni-auth-form'), intro=$('omni-auth-intro'), confirmWrap=$('omni-auth-confirm-wrap'), submit=$('omni-auth-submit'), status=$('omni-auth-status'), switchBtn=$('omni-auth-switch');let mode='register';
+ const defaultAvatar='data:image/svg+xml;charset=UTF-8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="50" fill="#30323c"/><circle cx="50" cy="37" r="18" fill="#00dce6"/><path d="M16 94c2-23 16-34 34-34s32 11 34 34" fill="#00dce6"/></svg>');
+ function read(k,fallback=null){try{return JSON.parse(localStorage.getItem(k)||'null')??fallback}catch(e){return fallback}}
+ function write(k,v){localStorage.setItem(k,JSON.stringify(v))}
+ function bytesToHex(b){return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('')}
+ async function hashPassword(password,salt){if(!crypto?.subtle)throw Error('المتصفح لا يدعم حماية كلمة المرور هنا. افتح الموقع عبر HTTPS أو Firebase Hosting.');const enc=new TextEncoder();const key=await crypto.subtle.importKey('raw',enc.encode(password),'PBKDF2',false,['deriveBits']);const bits=await crypto.subtle.deriveBits({name:'PBKDF2',salt:enc.encode(salt),iterations:150000,hash:'SHA-256'},key,256);return bytesToHex(bits)}
+ function showMode(next){mode=next;const registering=mode==='register';$('omni-auth-title').textContent=registering?'إنشاء حساب OmniPulse':'تسجيل الدخول إلى OmniPulse';intro.textContent=registering?'أنشئ حسابًا بكلمة مرور للبدء باستخدام المنصة.':'أدخل اسم الحساب وكلمة المرور اللذين أنشأتهما على هذا المتصفح.';confirmWrap.hidden=!registering;submit.textContent=registering?'إنشاء الحساب':'تسجيل الدخول';$('omni-auth-password').autocomplete=registering?'new-password':'current-password';switchBtn.textContent=registering?'لدي حساب بالفعل — تسجيل الدخول':'ليس لدي حساب — إنشاء حساب';status.textContent=''}
+ function getProfile(){return read(PROFILE_KEY,{name:(read(ACCOUNT_KEY,{})||{}).username||'',avatar:defaultAvatar})}
+ function applyProfile(){const p=getProfile();$('omni-profile-launch-name').textContent=p.name||'حسابي';$('omni-profile-launch-img').src=p.avatar||defaultAvatar;$('omni-profile-preview').src=p.avatar||defaultAvatar;const old=$('op-account-name');if(old&&p.name)old.value=p.name;}
+ function authenticated(){return !!read(SESSION_KEY,null)}
+ function unlock(){gate.hidden=true;$('omni-profile-launch').hidden=false;applyProfile();document.body.style.overflow='';}
+ function lock(){gate.hidden=false;$('omni-profile-launch').hidden=true;document.body.style.overflow='hidden';showMode(read(ACCOUNT_KEY,null)?'login':'register');}
+ form.addEventListener('submit',async e=>{e.preventDefault();const username=$('omni-auth-username').value.trim(),password=$('omni-auth-password').value,confirm=$('omni-auth-confirm').value;if(username.length<2){status.textContent='اسم الحساب يجب أن يتكون من حرفين على الأقل.';return}if(password.length<8){status.textContent='استخدم كلمة مرور من 8 أحرف على الأقل.';return}submit.disabled=true;status.textContent='جارٍ التحقق...';try{let account=read(ACCOUNT_KEY,null);if(mode==='register'){if(account){status.textContent='يوجد حساب على هذا المتصفح. سجّل الدخول بدلًا من إنشاء حساب جديد.';showMode('login');$('omni-auth-username').value=username;return}if(password!==confirm){status.textContent='كلمتا المرور غير متطابقتين.';return}const salt=crypto.getRandomValues(new Uint8Array(16));const saltHex=bytesToHex(salt);account={username,salt:saltHex,passwordHash:await hashPassword(password,saltHex),createdAt:Date.now()};write(ACCOUNT_KEY,account);write(PROFILE_KEY,{name:username,avatar:defaultAvatar})}else{if(!account){status.textContent='لا يوجد حساب بعد. أنشئ حسابًا أولًا.';showMode('register');return}if(username.toLowerCase()!==String(account.username).toLowerCase()){status.textContent='اسم الحساب غير صحيح.';return}const candidate=await hashPassword(password,account.salt);if(candidate!==account.passwordHash){status.textContent='كلمة المرور غير صحيحة.';return}}
+ write(SESSION_KEY,{username:account.username,startedAt:Date.now()});$('omni-auth-password').value='';$('omni-auth-confirm').value='';unlock();
+ }catch(err){status.textContent=err.message||'تعذّر إكمال العملية. جرّب تشغيل الموقع عبر HTTPS.'}finally{submit.disabled=false}});
+ switchBtn.addEventListener('click',()=>showMode(mode==='register'?'login':'register'));
+ $('omni-profile-launch').addEventListener('click',()=>{const p=getProfile();$('omni-profile-name').value=p.name||'';$('omni-profile-image').value='';$('omni-profile-status').textContent='';$('omni-profile-modal').classList.add('open')});$('omni-profile-close').addEventListener('click',()=>$('omni-profile-modal').classList.remove('open'));
+ $('omni-profile-image').addEventListener('change',e=>{const file=e.target.files&&e.target.files[0];if(!file)return;if(!file.type.startsWith('image/')){$('omni-profile-status').textContent='اختر ملف صورة صالحًا.';return}if(file.size>3*1024*1024){$('omni-profile-status').textContent='اختر صورة أصغر من 3 ميغابايت.';e.target.value='';return}const reader=new FileReader();reader.onload=()=>{$('omni-profile-preview').src=reader.result;$('omni-profile-preview').dataset.pending=reader.result};reader.onerror=()=>$('omni-profile-status').textContent='تعذرت قراءة الصورة.';reader.readAsDataURL(file)});
+ $('omni-profile-save').addEventListener('click',()=>{const name=$('omni-profile-name').value.trim();if(name.length<2){$('omni-profile-status').textContent='اكتب اسمًا يتكون من حرفين على الأقل.';return}const p=getProfile();p.name=name;p.avatar=$('omni-profile-preview').dataset.pending||p.avatar||defaultAvatar;try{write(PROFILE_KEY,p);const a=read(ACCOUNT_KEY,{});a.username=name;write(ACCOUNT_KEY,a);const s=read(SESSION_KEY,{});s.username=name;write(SESSION_KEY,s);$('omni-profile-preview').dataset.pending='';applyProfile();$('omni-profile-status').textContent='تم حفظ الاسم وصورة الحساب على هذا المتصفح.';const old=$('op-account-name');if(old)old.value=name;const oldStatus=$('op-account-status');if(oldStatus)oldStatus.textContent='تم حفظ اسم الحساب.'}catch(e){$('omni-profile-status').textContent='تعذر الحفظ؛ قد تكون مساحة المتصفح ممتلئة.'}});
+ $('omni-profile-logout').addEventListener('click',()=>{localStorage.removeItem(SESSION_KEY);$('omni-profile-modal').classList.remove('open');lock()});
+ // Do not allow closing or bypassing the sign-in gate before authentication.
+ if(authenticated())unlock();else lock();window.addEventListener('storage',e=>{if(e.key===SESSION_KEY){if(authenticated())unlock();else lock()}});
+})();
+</script>
+</body></html>
