@@ -34,4 +34,38 @@
  if(authenticated())unlock();else lock();window.addEventListener('storage',e=>{if(e.key===SESSION_KEY){if(authenticated())unlock();else lock()}});
 })();
 </script>
+
+<!-- OmniPulse responsive sidebar upgrade -->
+<style id="omni-sidebar-responsive-style">
+#omni-sidebar-toggle{position:fixed;top:14px;right:14px;z-index:2147481000;width:42px;height:42px;border:1px solid rgba(140,160,165,.35);border-radius:12px;background:#191a22;color:#f4f7f8;display:flex;align-items:center;justify-content:center;font-size:23px;cursor:pointer;box-shadow:0 4px 16px #0003}
+#omni-sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.42);z-index:2147480000}
+body.omni-sidebar-hidden aside{transform:translateX(110%);}
+body.omni-sidebar-hidden .pr-72{padding-right:0!important}
+body.omni-sidebar-hidden header{right:0!important}
+aside{transition:transform .22s ease!important}
+@media(max-width:760px){
+ aside{width:min(82vw,290px)!important;transform:translateX(110%);z-index:2147480001!important;padding-top:72px!important;overflow-y:auto!important}
+ body.omni-sidebar-open aside{transform:translateX(0)!important}
+ body.omni-sidebar-open #omni-sidebar-overlay{display:block}
+ .pr-72{padding-right:0!important}
+ header{right:0!important;left:0!important;padding-left:12px!important;padding-right:64px!important;height:64px!important;gap:8px!important}
+ header .relative.w-80{width:min(48vw,320px)!important}
+ header .flex.items-center.gap-4{gap:6px!important;flex-wrap:nowrap}
+ main{padding-left:12px!important;padding-right:12px!important;padding-top:64px!important}
+ #omni-sidebar-toggle{top:10px;right:10px;width:40px;height:40px}
+ #omni-profile-launch{top:10px!important;left:10px!important;max-width:calc(100vw - 65px)}
+ #op-tools{left:8px!important;right:8px!important;bottom:calc(8px + env(safe-area-inset-bottom))!important;flex-wrap:wrap}
+ #op-tools button{font-size:12px!important;padding:8px 9px!important}
+ #op-panel{left:8px!important;right:8px!important;width:auto!important;max-height:75vh!important}
+ #op-videos-feed{padding:0 8px!important}
+ video{max-width:100%;}
+}
+@media(min-width:761px){body.omni-sidebar-open aside{transform:translateX(0)}body.omni-sidebar-open .pr-72{padding-right:18rem!important}body.omni-sidebar-open header{right:18rem!important}}
+</style>
+<button id="omni-sidebar-toggle" type="button" aria-label="إظهار أو إخفاء القائمة" aria-expanded="false" title="القائمة">☰</button>
+<div id="omni-sidebar-overlay" aria-hidden="true"></div>
+<script id="omni-sidebar-responsive-script">
+(()=>{const b=document.getElementById('omni-sidebar-toggle'),overlay=document.getElementById('omni-sidebar-overlay');if(!b||!overlay)return;const mobile=()=>window.matchMedia('(max-width:760px)').matches;function close(){document.body.classList.remove('omni-sidebar-open');if(mobile())document.body.classList.add('omni-sidebar-hidden');b.setAttribute('aria-expanded','false')}function toggle(){if(mobile()){const open=document.body.classList.toggle('omni-sidebar-open');document.body.classList.toggle('omni-sidebar-hidden',!open);b.setAttribute('aria-expanded',String(open))}else{const hidden=document.body.classList.toggle('omni-sidebar-hidden');b.setAttribute('aria-expanded',String(!hidden))}}b.addEventListener('click',toggle);overlay.addEventListener('click',close);window.addEventListener('resize',()=>{if(mobile()){document.body.classList.remove('omni-sidebar-open');document.body.classList.add('omni-sidebar-hidden');b.setAttribute('aria-expanded','false')}else{document.body.classList.remove('omni-sidebar-open','omni-sidebar-hidden');b.setAttribute('aria-expanded','true')}});if(mobile()){document.body.classList.add('omni-sidebar-hidden');b.setAttribute('aria-expanded','false')}else{b.setAttribute('aria-expanded','true')}})();
+</script>
+
 </body></html>
